@@ -72,7 +72,7 @@ class Add extends CI_Controller {
 			$ddlCategory=$this->input->post('ddlCategory');
 
 			$txtcontractor=$this->input->post('txtcontractor');
-			$txtPlant=$this->input->post('txtPlant');
+			$ddlSelectPlant=$this->input->post('ddlSelectPlant');
 			$txtRegno=$this->input->post('txtRegno');
 			$txtEmail=$this->input->post('txtEmail');
 			$txtAge=$this->input->post('txtAge');
@@ -105,6 +105,8 @@ class Add extends CI_Controller {
 			$txtPresentPin=$this->input->post('txtPresentPin');
 			$txtMothername=$this->input->post('txtMotherName');
 
+			$txtUniformDate=$this->input->post('txtUniformDate');
+			$txtShoeDate=$this->input->post('txtShoeDate');
 
 			$fields = array(
 				'fname' => $fname,
@@ -135,10 +137,7 @@ class Add extends CI_Controller {
 				'emp_epf' => $emp_epf,
 				'emp_esi' => $emp_esi,
 				'house_rent' => $house_rent,
-				'tot_sal' => $tot_sal,
-				'increment_date' => $increment_date,
 				'inc_rate' => $inc_rate,
-				'nxt_inc' => $nxt_inc,
 				'area' => $txtArea,
 				'category' => $ddlCategory,
 				'contractor_name' => $txtcontractor,
@@ -175,6 +174,16 @@ class Add extends CI_Controller {
 				'mother_name' => $txtMothername
 			);
 			$service = $this->base_model->form_post('employee',$fields);
+			if($increment_date!=""){
+				$this->base_model->log_uniform('Incriment Done',$emp_id);
+			}
+			if($txtUniformDate!=""){
+				$this->base_model->log_uniform('Uniform Payment Done',$emp_id);
+			}
+			if($txtShoeDate!=""){
+				$this->base_model->log_uniform('Shoe Payment Done',$emp_id);
+			}
+			
 			if($service)
 			{
 				$this->base_model->news_file_upload($image,$temp);
@@ -1584,6 +1593,9 @@ class Add extends CI_Controller {
 	 redirect('Index/emp_attendance');
 
 	}
+
+
+
 
 
 

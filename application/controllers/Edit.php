@@ -121,7 +121,7 @@ class Edit extends CI_Controller {
 				$txtEmerygencyRelationship=$this->input->post('txtEmerygencyRelationship');
 				$txtEmargencyContactNumber=$this->input->post('txtEmargencyContactNumber');
 				$txtEmergencyAddrss=$this->input->post('txtEmergencyAddrss');
-
+				$ddlSelectPlant=$this->input->post('ddlSelectPlant');
 				$txtPermanentVill=$this->input->post('txtPermanentVill');
 				$txtParmanentPS=$this->input->post('txtParmanentPS');
 				$txtParmanentPin=$this->input->post('txtParmanentPin');
@@ -133,6 +133,9 @@ class Edit extends CI_Controller {
 				$txtMothername=$this->input->post('txtMotherName');
 
 				$update_record_id=$this->input->post('record_id_for_update');
+
+				$txtUniformDate=$this->input->post('txtUniformDate');
+				$txtShoeDate=$this->input->post('txtShoeDate');
 
 				$fields = array(
 					'fname' => $fname,
@@ -170,7 +173,7 @@ class Edit extends CI_Controller {
 					'area' => $txtArea,
 					'category' => $ddlCategory,
 					'contractor_name' => $txtcontractor,
-					'plant_name' => $txtPlant,
+					'plant_name' => $ddlSelectPlant,
 					'regno' => $emp_id,
 					'email' => $txtEmail,
 					'age' => $txtAge,
@@ -204,6 +207,16 @@ class Edit extends CI_Controller {
 				);
 				$this->db->where('emp_id_auto', $update_record_id);
 				$this->db->update('employee', $fields);
+
+				if($increment_date!=""){
+				$this->base_model->log_uniform($increment_date,'Incriment Done',$update_record_id);
+				}
+				if($txtUniformDate!=""){
+					$this->base_model->log_uniform($txtUniformDate,'Uniform Payment Done',$update_record_id);
+				}
+				if($txtShoeDate!=""){
+					$this->base_model->log_uniform($txtShoeDate,'Shoe Payment Done',$update_record_id);
+				}
 
 				$this->session->set_flashdata('sucess_log', 'Employee Edit Successfully');
 				redirect(base_url().'Index/Employee');

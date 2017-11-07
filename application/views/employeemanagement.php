@@ -166,7 +166,7 @@
               <h3 class="alert alert-info">Employee Management</h3>
               <h5 class="alert alert-warning"><strong>Personal Details<span class="pull-right">STEP - I</span></strong></h5>
               <?php if (!empty($edit)): ?>
-                <form class="form-grop" id="emp_data" name="emp_data" action="<?php echo base_url();?>edit/Employee" enctype="multipart/form-data" method="post">
+                <form class="form-grop" id="emp_data" name="emp_data" action="<?php echo base_url();?>edit/Employee/<?php echo $edit[0]['emp_id_auto'] ?> " enctype="multipart/form-data" method="post">
                     <input type="hidden"  name="mode" value="edit">
                     <input type="hidden" name="oldimage" value="<?php echo $img; ?>">
                     <input type="hidden" name="record_id_for_update" value="<?php echo $edit[0]['emp_id_auto'] ?>">
@@ -301,8 +301,9 @@
 </div>
 
 <div class="row">
-    <div class="col-md-2 text-right" style="padding-top:5px;">Reference</div><div class="col-md-10"><textarea name="refrnce" id="refrnce" type="text" class="form-control" /><?php echo $refrnce; ?></textarea></div>
-
+    <div class="col-md-2 text-right" style="padding-top:5px;">Reference</div><div class="col-md-10">
+      <textarea name="refrnce" id="refrnce" type="text" class="form-control" /><?php echo $refrnce; ?></textarea>
+    </div>
 </div>
 
 
@@ -415,22 +416,19 @@
             <div class="col-md-2 text-right" style="padding-top:5px;">House Rent</div><div class="col-md-2" style="padding-top:5px;">
             <input name="house_rent" value="<?php echo $house_rent; ?>" id="house_rent" type="text" class="form-control" value="<?php echo $house_rent; ?>" />
             </div>
-            <div class="col-md-2 text-right" style="padding-top:5px;">Total Salary</div><div class="col-md-2" style="padding-top:5px;">
-            <input name="tot_sal" value="<?php echo $tot_sal; ?>" id="tot_sal" type="text" class="form-control" value="<?php echo $tot_sal; ?>" />
+            <div class="col-md-2 text-right" style="padding-top:5px;">Increment Date</div><div class="col-md-2">
+            <input name="increment_date" id="increment_date" value="" type="date" class="form-control" />
             </div>
+            
         </div>
         
         <div class="row">
-            <div class="col-md-2 text-right" style="padding-top:5px;">Increment Date</div><div class="col-md-2">
-            <input name="increment_date" id="increment_date" value="<?php echo $increment_date; ?>" type="date" class="form-control" />
-            </div>
-            <div class="col-md-2 text-right" style="padding-top:5px;">Increment Rate</div><div class="col-md-2" style="padding-top:5px;">
-            <input name="inc_rate" id="inc_rate" value="<?php echo $inc_rate; ?>" type="text" class="form-control" /></div>
-            <div class="col-md-2 text-right" style="padding-top:5px;">Next Increment</div><div class="col-md-2" style="padding-top:5px;">
-            <input name="nxt_inc" id="nxt_inc" value="<?php echo $nxt_inc; ?>" type="date" class="form-control" />
-            </div>
-            <div class="col-md-2 text-right" style="padding-top:5px;">Area</div><div class="col-md-2" style="padding-top:5px;">
-            <input name="txtArea" id="txtArea" value="<?php echo $txtArea; ?>" type="text" class="form-control" /></div>
+            <div class="col-md-2 text-right" style="padding-top:5px;">Uniform Date</div><div class="col-md-2">
+            <input name="txtUniformDate" id="txtUniformDate" value="" type="date" class="form-control" /></div>
+
+            <div class="col-md-2 text-right" style="padding-top:5px;">Shoe Date</div><div class="col-md-2">
+            <input name="txtShoeDate" id="txtShoeDate" value="" type="date" class="form-control" /></div>
+
             <div class="col-md-2 text-right" style="padding-top:5px;">Category</div><div class="col-md-2" style="padding-top:5px;">
             <select name="ddlCategory" id="ddlCategory" class="form-control">
             <option  value="">SELECT CATEGORY</option>

@@ -610,6 +610,19 @@ public function do_attendance($emp_id,$full_day,$half_day)
     }
 
 
+      // Insert Shoe , Increment , Uniform Data
+  public function log_uniform($date,$reason,$emp_id)
+  {
+    $object=array(
+      'emp_id' => $emp_id,
+      'date' => $date,
+      'reason' => $reason
+    );
+
+    $this->db->insert('tbl_incriment_uniform_shoe_log', $object);
+  }
+
+
 }
 
 ?>
