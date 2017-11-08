@@ -269,10 +269,10 @@ class Index extends CI_Controller {
 		if ( isset($_SESSION['user'])) {
 
 			$data=array(
-				'supervisorlist' => $this->base_model->getallsupervisor(),
+				'supervisorlist' =>'', //$this->base_model->getallsupervisor(),
 				'factory_locations' => $this->base_model->getfactorylocation(),
-				'employeelist' => $this->base_model->getallemployee(),
-				'factory_list' => $this->base_model->getsupervisorlist('')
+				'employeelist' => $this->base_model->getallemployee(),//,
+				'factory_list' => '' //$this->base_model->getsupervisorlist('')
 			);
 			// echo $this->db->last_query();
 			//  		die;
@@ -404,6 +404,43 @@ class Index extends CI_Controller {
 			$this->load->view('attendance_list_view');
 		}
 
+	}
+
+
+	// This Function For Assign Worker
+	public function workers_assign()
+	{
+		if ($this->input->post('btnSubmit') == 'search') {
+			// Get Value And Clean XSS
+			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+			$ddlType=$this->security->xss_clean($this->input->post('ddlType'));
+
+			$plant=explode('-', $ddlPlant);
+
+			if($ddlType==1){
+				$search_type = 'Assign';
+			}
+			else{
+				$search_type = 'Unassign';
+			}
+
+			$data=array(
+				'listing_data' => $this->base_model->worker_listing($plant[0],$ddlType),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+				'plant_name' => $plant[1],
+				'plant_id' => $plant[0],
+				'search_type' => $search_type
+			);
+		}
+		else{
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+			);
+		}
+		
+		// echo $this->db->last_query();
+		// die;
+		$this->load->view('workers_assign_view',$data);
 	}
 
 

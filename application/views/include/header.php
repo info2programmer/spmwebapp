@@ -31,14 +31,17 @@
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-left">
                 <?php if (!$this->session->userdata('type')): ?>
-                   <li class="active navlitxt"><a href="<?php echo base_url(); ?>Index/accountsettings" class="dropdown-toggle" role="button">Account Settings</a></li>   
-                    <li class="navlitxt"><a href="<?php echo base_url() ?>Index/factorysetting" class="dropdown-toggle" role="button">Factory Settings</a></li>
+                   <li class="active navlitxt"><a href="<?php echo base_url(); ?>Index/accountsettings" class="dropdown-toggle" role="button">Account Settings</a></li>  
+                    
+                    <!-- <li class="navlitxt"><a href="<?php// echo base_url() ?>Index/factorysetting" class="dropdown-toggle" role="button">Factory Settings</a></li> -->
                     <li class="navlitxt"><a href="<?php echo base_url() ?>Index/Plant" class="dropdown-toggle" role="button">Plant Details</a></li>
-                    <li class="navlitxt"><a href="leavesettings.php" class="dropdown-toggle" role="button">Leave Settings</a></li>
+                    
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/Employee" class="dropdown-toggle" role="button">Add Employee</a></li>   
-                    <li class="navlitxt"><a href="leavemanagement.php" class="dropdown-toggle" role="button">Attendance</a></li>
-                    <li class="navlitxt"><a href="salary.php" class="dropdown-toggle" role="button">Salary</a></li>
-                    <li class="navlitxt"><a href="accountsandreports.php" class="dropdown-toggle" role="button">Accounts & Reports</a></li>
+
+                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/workers_assign" class="dropdown-toggle" role="button">Worker Assign</a></li>  
+                    <!-- <li class="navlitxt"><a href="leavemanagement.php" class="dropdown-toggle" role="button">Attendance</a></li> -->
+                   <!--  <li class="navlitxt"><a href="salary.php" class="dropdown-toggle" role="button">Salary</a></li> -->
+                    <!-- <li class="navlitxt"><a href="accountsandreports.php" class="dropdown-toggle" role="button">Accounts & Reports</a></li> -->
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/logout" class="dropdown-toggle" role="button">Log Out</a></li>
                 <?php else: ?>
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/emp_attendance.html" class="dropdown-toggle" role="button">Employee Attendance</a></li>

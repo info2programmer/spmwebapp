@@ -209,7 +209,7 @@ class Edit extends CI_Controller {
 				$this->db->update('employee', $fields);
 
 				if($increment_date!=""){
-				$this->base_model->log_uniform($increment_date,'Incriment Done',$update_record_id);
+					$this->base_model->log_uniform($increment_date,'Incriment Done',$update_record_id);
 				}
 				if($txtUniformDate!=""){
 					$this->base_model->log_uniform($txtUniformDate,'Uniform Payment Done',$update_record_id);
@@ -455,27 +455,27 @@ class Edit extends CI_Controller {
 
 			$this->form_validation->set_rules('txtUsername', 'Username', 'trim|required|is_unique[tbl_factory.username]');
 
-				$object=array(
-					'password' => md5($txtPassword),
-					'pass_org' => $txtPassword,
-					'location' => $txtPlantLocation,
-					'factory_name' => $txtPlant,
-					'full_address' => $txtPlantAddress,
-					'pin' => $txtPincode,
-					'phone_number' => $txtPhoneNumber,
-					'email_address' => $txtEmail,
-					'contact_person' => $txtSupervison,
-					'mobile_number' => $txtSupervisorPhone,
-					'status' => 1,
-					'pan_no' => $txtPanNo,
-					'gstin' => $txtGSTIN,
-					'working_hours' => $txtWorkingHours
-				);
+			$object=array(
+				'password' => md5($txtPassword),
+				'pass_org' => $txtPassword,
+				'location' => $txtPlantLocation,
+				'factory_name' => $txtPlant,
+				'full_address' => $txtPlantAddress,
+				'pin' => $txtPincode,
+				'phone_number' => $txtPhoneNumber,
+				'email_address' => $txtEmail,
+				'contact_person' => $txtSupervison,
+				'mobile_number' => $txtSupervisorPhone,
+				'status' => 1,
+				'pan_no' => $txtPanNo,
+				'gstin' => $txtGSTIN,
+				'working_hours' => $txtWorkingHours
+			);
 
-				$this->base_model->update_plant_data($txtEditId,$object);
-				$this->session->set_flashdata('success_log','Planrt Updated Successfully');
-				redirect('Index/Plant');
-			}
+			$this->base_model->update_plant_data($txtEditId,$object);
+			$this->session->set_flashdata('success_log','Planrt Updated Successfully');
+			redirect('Index/Plant');
+		}
 		else{
 			$id=$this->security->xss_clean($plant_id);
 			$data=array(
@@ -486,4 +486,4 @@ class Edit extends CI_Controller {
 		}
 	}
 
-	}
+}

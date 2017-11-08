@@ -622,6 +622,32 @@ public function do_attendance($emp_id,$full_day,$half_day)
     $this->db->insert('tbl_incriment_uniform_shoe_log', $object);
   }
 
+  // This Function For workerlisting by plant and assign status
+  public function worker_listing($plant_id,$assign_status)
+  {
+    $this->db->where('plant_name', $plant_id);
+    $this->db->where('assign_status', $assign_status);
+    $query=$this->db->get('employee');
+    return $query->result();
+  }
+
+
+  // This Function To assign worker by workerid and plant id
+  public function assign_worker($object)
+  {
+    $this->db->insert('tbl_work_assign', $object);
+  }
+
+  // This Function to Update Employee Table
+  public function assing_employee_table($id,$status)
+  {
+    $this->db->where_in('emp_id_auto', $id);
+    $object = array(
+      'assign_status' => $status
+    );
+    $this->db->update('employee', $object);
+  }
+
 
 }
 

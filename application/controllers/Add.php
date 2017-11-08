@@ -1595,6 +1595,35 @@ class Add extends CI_Controller {
 	}
 
 
+	// This Function For Assign Worker list
+	public function assign_worker()
+	{
+		if($this->input->post('btnSubmit') == 'assign'){
+			// Clean XSS and Store into valriable
+			$txtAssignDate=$this->security->xss_clean($this->input->post('txtAssignDate'));
+			$txtRelease=$this->security->xss_clean($this->input->post('txtRelease'));
+			$txtPlantId=$this->security->xss_clean($this->input->post('txtPlantId'));
+
+			foreach ($this->input->post('emp_id') as $worker_list) {
+				$object=array(
+					'from_dare' => $txtAssignDate,
+					'to_date' => $txtRelease,
+					'employee_id' => $worker_list,
+					'plant_id' => $txtPlantId,
+					'status' => 1
+				);
+
+				$this->base_model->assign_worker($object);
+			}
+
+			$this->base_model->assing_employee_table($this->input->post('emp_id'),1);
+
+			$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
+			redirect('Index/workers_assign','refresh');
+		}
+	}
+
+
 
 
 
