@@ -1621,6 +1621,18 @@ class Add extends CI_Controller {
 			$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
 			redirect('Index/workers_assign','refresh');
 		}
+
+		if($this->input->post('btnSubmit') == 'unassign'){
+			$txtPlantId=$this->security->xss_clean($this->input->post('txtPlantId'));
+
+			foreach ($this->input->post('emp_id') as $worker_list) {
+				$this->base_model->release_worker($txtPlantId,$worker_list->emp_id_auto)
+			}
+			$this->base_model->assing_employee_table($this->input->post('emp_id'),0);
+			$this->session->set_flashdata('success_log', 'Worker Un-Assign Successfully');
+			redirect('Index/workers_assign','refresh');
+
+		}
 	}
 
 

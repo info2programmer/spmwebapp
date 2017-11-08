@@ -638,6 +638,18 @@ public function do_attendance($emp_id,$full_day,$half_day)
     $this->db->insert('tbl_work_assign', $object);
   }
 
+  // This Funcation To relese worker list
+  public function release_worker($plant_id,$emp_id)
+  {
+    $this->db->where('plant_id', $plant_id);
+    $this->db->where('employee_id', $emp_id);
+    $object=array(
+      'status' => 0,
+      'release_date' => date('Y-m-d')
+    );
+    $this->db->update('release_date', $object);
+  }
+
   // This Function to Update Employee Table
   public function assing_employee_table($id,$status)
   {
