@@ -175,7 +175,7 @@
                     <?php endif ?>
 
                     <div class="row">
-                       <div class="col-md-3 text-right" style="padding-top:5px;">Plant Name</div><div class="col-md-3">
+                       <div class="col-md-2 text-right" style="padding-top:5px;">Plant Name</div><div class="col-md-4">
                         <select class="form-control" name="ddlSelectPlant" required id="ddlSelectPlant">
                           <option value="" hidden selected>Click Here</option>
                         <?php foreach($plant_details as $list): ?>
@@ -184,7 +184,7 @@
                         </select>
 
                    </div>
-                   <div class="col-md-3 text-right" style="padding-top:5px;">Reg.no (autogen)</div><div class="col-md-3">
+                   <div class="col-md-2 text-right" style="padding-top:5px;">Reg.no (autogen)</div><div class="col-md-4">
                    <?php if (!empty($edit)): ?>
                       <input name="emp_id" id="emp_id" type="text" class="form-control" readonly="readonly" value="SPM/EMP/<?php echo $empDtlcnt[0]['empcnt'];?>" />
                   <?php else: ?>
@@ -211,12 +211,14 @@
           <div class="col-md-2 text-right" style="padding-top:5px;">Mobile 1</div><div class="col-md-2"><input name="mob_no" value="<?php echo $txtMobileNo ?>" id="mob_no" type="text" class="form-control" maxlength="10"/></div>
           <div class="col-md-2 text-right" style="padding-top:5px;">Mobile 2</div><div class="col-md-2"><input name="phn_no" id="phn_no" type="text" value="<?php echo  $txtPhoneNo  ?>" class="form-control" maxlength="10"/></div>
       </div>
-      <div class="row">
-       <div class="col-md-2 text-right" style="padding-top:5px;">Email</div><div class="col-md-10"><input name="txtEmail" id="txtEmail" value="<?php  echo $txtEmail ?>" type="text" class="form-control"/></div>
-   </div>
+      <!-- <div class="row">
+       <div class="col-md-2 text-right" style="padding-top:5px;">Email</div><div class="col-md-10"><input name="txtEmail" id="txtEmail" value="<?php  //echo $txtEmail ?>" type="text" class="form-control"/></div>
+   </div> -->
    <div class="row">
-       <div class="col-md-2 text-right" style="padding-top:5px;">Date of Birth</div><div class="col-md-2"><input name="dob" id="dob" value="<?php echo $dob; ?>" type="text" class="form-control"/></div>
-       <div class="col-md-2 text-right" style="padding-top:5px;">Age</div><div class="col-md-2"><input name="txtAge" id="txtAge" type="text" class="form-control" value="<?php echo $txtAge ?>" /></div>
+      <div class="col-md-2 text-right" style="padding-top:5px;">Email</div><div class="col-md-2"><input name="txtEmail" id="txtEmail" value="<?php  echo $txtEmail ?>" type="text" class="form-control"/></div>
+       <div class="col-md-2 text-right" style="padding-top:5px;">Date of Birth</div><div class="col-md-2"><input name="dob"  value="<?php echo $dob; ?>" type="date" class="form-control"/></div>
+
+      <!--  <div class="col-md-2 text-right" style="padding-top:5px;">Age</div><div class="col-md-2"><input name="txtAge" id="txtAge" type="text" class="form-control" value="<?php //echo $txtAge ?>" /></div> -->
        <div class="col-md-2 text-right" style="padding-top:5px;">Religion</div><div class="col-md-2"><input name="txtReligion" id="txtReligion" type="text" class="form-control" value="<?php echo $txtReligion ?>"/></div>
    </div>
 
@@ -430,8 +432,8 @@
             <input name="txtShoeDate" id="txtShoeDate" value="" type="date" class="form-control" /></div>
 
             <div class="col-md-2 text-right" style="padding-top:5px;">Category</div><div class="col-md-2" style="padding-top:5px;">
-            <select name="ddlCategory" id="ddlCategory" class="form-control">
-            <option  value="">SELECT CATEGORY</option>
+            <select name="ddlCategory" required id="ddlCategory" class="form-control">
+            <option  value="" hidden>Click Here</option>
             <option <?php if($ddlCategory=="SKILLED"): ?> selected="selected" <?php endif; ?> value="SKILLED">SKILLED</option>
             <option <?php if($ddlCategory=="SEMISKILLED"): ?> selected="selected" <?php endif; ?> value="SEMISKILLED">SEMISKILLED</option>
             <option <?php if($ddlCategory=="UNSKILLED"): ?> selected="selected" <?php endif; ?> value="UNSKILLED">UNSKILLED</option>

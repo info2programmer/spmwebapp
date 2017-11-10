@@ -485,9 +485,17 @@ $this->load->model('base_model');
     // echo $this->db->last_query();
     // die;
     $this->load->view('attendance_details_view', $data);
+ }
 
 
+ // This Function For View Employee Data
+ public function employee($id)
+ {
+ 	// Clean XSS
+ 	$id=$this->security->xss_clean($id);
 
+ 	$data['data'] = $this->db->query('SELECT * FROM employee WHERE emp_id_auto='.$id)->result_array();
+ 	$this->load->view('eployeedetails', $data);
  }
 
 
