@@ -434,12 +434,14 @@ public function getallsupervisor()
 public function checkcredential($txt_username,$txt_password)
 {
   $this->db->where('status', 1);
-  $this->db->where('mobile_number',$txt_username);
+  $this->db->where('username',$txt_username);
   $this->db->where('password',$txt_password);
-  $result=$this->db->get('auth_supervisor');
+  $result=$this->db->get('tbl_factory');
+  // echo $this->db->last_query();
+  // die;
   if($result->num_rows()==1){
-    $this->auth_supervisor_last_login($txt_username,$txt_password);
-    return $result->row(0)->record_id;
+    // $this->auth_supervisor_last_login($txt_username,$txt_password);
+    return $result->row(0)->factory_id;
   }
   else{
     return false;
