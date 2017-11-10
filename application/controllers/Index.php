@@ -207,7 +207,7 @@ class Index extends CI_Controller {
 		if ( isset($_SESSION['user'])) {
 			$data['empDtlcnt'] = $this->db->query('SELECT MAX(emp_id_auto) AS empcnt FROM employee ORDER BY emp_id_auto DESC')->result_array();
 			$data['empDtl'] = $this->db->query('SELECT * FROM employee ORDER BY emp_id_auto DESC')->result_array();
-			$data['plant_details'] =   $this->db->query('SELECT * FROM tbl_factory')->result();
+			$data['plant_details'] =   $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result();
 
 			$this->load->view('employeemanagement',$data);
 		}
@@ -426,7 +426,7 @@ class Index extends CI_Controller {
 
 			$data=array(
 				'listing_data' => $this->base_model->worker_listing($plant[0],$ddlType),
-				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result(),
 				'plant_name' => $plant[1],
 				'plant_id' => $plant[0],
 				'search_type' => $search_type
@@ -434,7 +434,7 @@ class Index extends CI_Controller {
 		}
 		else{
 			$data=array(
-				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result(),
 			);
 		}
 		
@@ -453,14 +453,14 @@ class Index extends CI_Controller {
 
 			$data=array(
 				'listing_data' => $this->base_model->worker_listing($plant[0],""),
-				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result(),
 				'plant_name' => $plant[1],
 				'plant_id' => $plant[0]
 			);
 		}
 		else{
 			$data=array(
-				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result()
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result()
 			);
 		}
 		$this->load->view('transfer_worker', $data);
