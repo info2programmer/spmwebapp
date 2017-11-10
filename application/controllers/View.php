@@ -495,6 +495,7 @@ $this->load->model('base_model');
  	$id=$this->security->xss_clean($id);
 
  	$data['data'] = $this->db->query('SELECT * FROM employee WHERE emp_id_auto='.$id)->result_array();
+ 	$data['short_list'] = $this->db->query('SELECT * FROM tbl_incriment_uniform_shoe_log WHERE emp_id='.$id.' ORDER BY id DESC')->result();
  	$this->load->view('eployeedetails', $data);
  }
 
