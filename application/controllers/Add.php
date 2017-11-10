@@ -1439,17 +1439,17 @@ class Add extends CI_Controller {
 		} else {
 
 			$date1 = date_create($txtFromDate);
-				$date2 = date_create($txtTodate);
-				$diff = date_diff($date1,$date2);
-				$days=$diff->format("%a");
-				 $days=$days+1;
-				
-				$object=array(
-					'supervisor_id' => $txtName,
-					'factory_location' => $ddlFactoryLocation,
-					'factory_name' => $ddlFactoryName,
-					'mobile_number' => $txtMobileNumber,
-					'password' => md5($txtPassword),
+			$date2 = date_create($txtTodate);
+			$diff = date_diff($date1,$date2);
+			$days=$diff->format("%a");
+			$days=$days+1;
+
+			$object=array(
+				'supervisor_id' => $txtName,
+				'factory_location' => $ddlFactoryLocation,
+				'factory_name' => $ddlFactoryName,
+				'mobile_number' => $txtMobileNumber,
+				'password' => md5($txtPassword),
 				'org_password' => $txtPassword,
 				'status' => 1,
 				'from_date' => $txtFromDate,
@@ -1572,25 +1572,25 @@ class Add extends CI_Controller {
 	public function Attendance()
 	{
 
-	 $fulldays=$this->input->post('empfullday');
-	 $half_days=$this->input->post('emphalfday');
+		$fulldays=$this->input->post('empfullday');
+		$half_days=$this->input->post('emphalfday');
 
 	 // print_r($fullday);
 	 // echo "<br>";
 	 // print_r($half_day);
 
 	 //This Section For Full Day attendance
-	 foreach ($fulldays as $day => $value) {
-	 	$this->base_model->do_attendance($value,1,0);
-	 }
+		foreach ($fulldays as $day => $value) {
+			$this->base_model->do_attendance($value,1,0);
+		}
 
 	 //This Loop For Half Day
-	 foreach ($half_days as $day => $value) {
-	 	$this->base_model->do_attendance($value,0,1);
-	 }
+		foreach ($half_days as $day => $value) {
+			$this->base_model->do_attendance($value,0,1);
+		}
 
-	 $this->session->set_flashdata('success_log', 'Attendance Submited Successfully');
-	 redirect('Index/emp_attendance');
+		$this->session->set_flashdata('success_log', 'Attendance Submited Successfully');
+		redirect('Index/emp_attendance');
 
 	}
 
@@ -1626,7 +1626,7 @@ class Add extends CI_Controller {
 			$txtPlantId=$this->security->xss_clean($this->input->post('txtPlantId'));
 
 			foreach ($this->input->post('emp_id') as $worker_list) {
-				$this->base_model->release_worker($txtPlantId,$worker_list->emp_id_auto)
+				$this->base_model->release_worker($txtPlantId,$worker_list);
 			}
 			$this->base_model->assing_employee_table($this->input->post('emp_id'),0);
 			$this->session->set_flashdata('success_log', 'Worker Un-Assign Successfully');
@@ -1635,7 +1635,26 @@ class Add extends CI_Controller {
 		}
 	}
 
+	// This Function For Transfer Student
+	public function transfer_worker()
+	{
+		// Get Plant Id
+		$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+		$emp_id = $this->input->post('emp_id');
 
+		if($emp_id!="")
+		{
+			$plant=explode('-', $ddlPlant)
+			$this->base_model->transfer_worker($plant[0],$emp_id);
+			$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
+			redirect('Index/transfer_worker','refresh');
+		}
+		else{
+			$this->session->set_flashdata('error_log', 'You don\'t select any worker');
+			redirect('Index/transfer_worker','refresh');
+		}
+		
+	}
 
 
 

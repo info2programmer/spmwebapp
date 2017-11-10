@@ -39,6 +39,9 @@
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/Employee" class="dropdown-toggle" role="button">Add Employee</a></li>   
 
                      <li class="navlitxt"><a href="<?php echo base_url();?>Index/workers_assign" class="dropdown-toggle" role="button">Worker Assign</a></li>  
+
+                      <li class="navlitxt"><a href="<?php echo base_url();?>Index/transfer_worker" class="dropdown-toggle" role="button">Transfer Worker</a></li>
+
                     <!-- <li class="navlitxt"><a href="leavemanagement.php" class="dropdown-toggle" role="button">Attendance</a></li> -->
                    <!--  <li class="navlitxt"><a href="salary.php" class="dropdown-toggle" role="button">Salary</a></li> -->
                     <!-- <li class="navlitxt"><a href="accountsandreports.php" class="dropdown-toggle" role="button">Accounts & Reports</a></li> -->

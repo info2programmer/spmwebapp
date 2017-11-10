@@ -626,7 +626,10 @@ public function do_attendance($emp_id,$full_day,$half_day)
   public function worker_listing($plant_id,$assign_status)
   {
     $this->db->where('plant_name', $plant_id);
-    $this->db->where('assign_status', $assign_status);
+    if($assign_status!="")
+    {
+      $this->db->where('assign_status', $assign_status);
+    }
     $query=$this->db->get('employee');
     return $query->result();
   }
@@ -647,7 +650,8 @@ public function do_attendance($emp_id,$full_day,$half_day)
       'status' => 0,
       'release_date' => date('Y-m-d')
     );
-    $this->db->update('release_date', $object);
+    $this->db->update('tbl_work_assign', $object);
+    // $this->db->update('tbl_work_assign', $object);
   }
 
   // This Function to Update Employee Table
@@ -657,6 +661,15 @@ public function do_attendance($emp_id,$full_day,$half_day)
     $object = array(
       'assign_status' => $status
     );
+    $this->db->update('employee', $object);
+  }
+
+
+  // This Function For Transfer Worker
+  public function transfer_worker($plant_id,$worker_id)
+  {
+    $this->db->where_in('emp_id_auto', $worker_id);
+    $object['plant_name'] = $plant_id;
     $this->db->update('employee', $object);
   }
 

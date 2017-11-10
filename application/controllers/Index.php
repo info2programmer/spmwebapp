@@ -443,6 +443,29 @@ class Index extends CI_Controller {
 		$this->load->view('workers_assign_view',$data);
 	}
 
+	// This Function For Transfer Worker
+	public function transfer_worker()
+	{
+		if ($this->input->post('btnSubmit') == 'search') {
+
+			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+			$plant=explode('-', $ddlPlant);
+
+			$data=array(
+				'listing_data' => $this->base_model->worker_listing($plant[0],""),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result(),
+				'plant_name' => $plant[1],
+				'plant_id' => $plant[0]
+			);
+		}
+		else{
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory')->result()
+			);
+		}
+		$this->load->view('transfer_worker', $data);
+	}
+
 
 
 }

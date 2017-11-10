@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b23a0afe-9225-41f4-bde6-188709fa22ae" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_spm@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_spm@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_spm" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_spm@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_spm" type="e3449647:DbNodeDescriptor" />
+        <item name="tbl_work_assign" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="attendance_list_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/attendance_list_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1278">
+              <caret line="71" column="14" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="71" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/View.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9812">
+              <caret line="476" column="0" lean-forward="true" selection-start-line="476" selection-start-column="0" selection-end-line="486" selection-end-column="56" />
+              <folding>
+                <marker date="1505971836198" expanded="true" signature="927:1253" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="1616:1657" ph="SELECT * FRO... employee" />
+                <marker date="1505971836198" expanded="true" signature="1968:2294" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="2721:3047" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="3444:3486" ph="SELECT * FRO... td_admin" />
+                <marker date="1505971836198" expanded="true" signature="3699:4025" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="4372:4414" ph="SELECT * FRO... td_service" />
+                <marker date="1505971836198" expanded="true" signature="4500:4542" ph="SELECT * FRO... td_media_type" />
+                <marker date="1505971836198" expanded="true" signature="4628:4689" ph="SELECT * FRO... td_area" />
+                <marker date="1505971836198" expanded="true" signature="4751:4813" ph="SELECT * FRO... td_size" />
+                <marker date="1505971836198" expanded="true" signature="4877:4917" ph="SELECT * FRO... td_client" />
+                <marker date="1505971836198" expanded="true" signature="5151:5477" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="5657:5693" ph="SELECT * FRO... td_order" />
+                <marker date="1505971836198" expanded="true" signature="5916:6242" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="6422:6465" ph="SELECT * FRO... td_order" />
+                <marker date="1505971836198" expanded="true" signature="6817:6898" ph="SELECT * FRO... td_area" />
+                <marker date="1505971836198" expanded="true" signature="6959:7039" ph="SELECT * FRO... td_order" />
+                <marker date="1505971836198" expanded="true" signature="7817:7898" ph="SELECT * FRO... td_area" />
+                <marker date="1505971836198" expanded="true" signature="7962:8041" ph="SELECT * FRO... ${$tbl}" />
+                <marker date="1505971836198" expanded="true" signature="8887:8967" ph="SELECT * FRO... ${$tbl}" />
+                <marker date="1505971836198" expanded="true" signature="9174:9500" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="9680:9725" ph="SELECT * FRO... td_landlord" />
+                <marker date="1505971836198" expanded="true" signature="9977:10001" ph="SELECT * FRO... td_trading" />
+                <marker date="1505971836198" expanded="true" signature="10316:10642" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="11075:11401" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="11812:12138" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="12549:12875" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="13292:13618" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="14035:14361" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="14779:15105" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="15528:15854" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="16220:16266" ph="select * fro... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="16297:16623" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="16966:17292" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="17475:17638" ph="select * fro... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="17755:17832" ph="select * fro... td_client" />
+                <marker date="1505971836198" expanded="true" signature="17893:17973" ph="select * fro... td_service" />
+                <marker date="1505971836198" expanded="true" signature="18230:18272" ph="select * fro... td_client" />
+                <marker date="1505971836198" expanded="true" signature="18336:18502" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="18533:18859" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="19194:19520" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="19703:19727" ph="select * fro... td_service" />
+                <marker date="1505971836198" expanded="true" signature="19944:20270" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="20450:20474" ph="select * fro... td_service" />
+                <marker date="1505971836198" expanded="true" signature="20528:20858" ph="select sa.*,... td_account" />
+                <marker date="1505971836198" expanded="true" signature="20952:21282" ph="select sa.*,... td_account" />
+                <marker date="1505971836198" expanded="true" signature="21672:21998" ph="select sa.*,... td_service_assign" />
+                <marker date="1505971836198" expanded="true" signature="22181:22205" ph="select * fro... td_service" />
+                <marker date="1505971836198" expanded="true" signature="22270:22353" ph="select disti... td_account" />
+                <marker date="1505971836198" expanded="true" signature="22418:22515" ph="select disti... td_account" />
+                <marker date="1505971836198" expanded="true" signature="22824:23150" ph="select sa.*,... td_service_assign" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Delete.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="169" column="8" lean-forward="true" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="8" />
+              <folding>
+                <element signature="n#MediaType#0;n#Delete#0;n#!!top" expanded="false" />
+                <element signature="n#Client#0;n#Delete#0;n#!!top" expanded="false" />
+                <element signature="n#Project#0;n#Delete#0;n#!!top" expanded="false" />
+                <element signature="n#ServiceAssign#0;n#Delete#0;n#!!top" expanded="false" />
+                <element signature="n#deleteemployee#0;n#Delete#0;n#!!top" expanded="false" />
+                <marker date="1505293987781" expanded="true" signature="849:891" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="1100:1139" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="1347:1385" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="1593:1630" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="1852:1898" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="2114:2154" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="2367:2407" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="2615:2647" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="2854:2892" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="3104:3147" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="3365:3409" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="3621:3657" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="3861:3897" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="4106:4142" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="4356:4398" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="4605:4645" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="4851:4889" ph="delete from " />
+                <marker date="1505293987781" expanded="true" signature="5105:5149" ph="delete from " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/Base_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9468">
+              <caret line="526" column="43" lean-forward="false" selection-start-line="526" selection-start-column="43" selection-end-line="526" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7056">
+              <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attendance_details_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/attendance_details_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="46" column="56" lean-forward="false" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#5#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/controllers/Index.php" />
+        <option value="$PROJECT_DIR$/application/views/attendance_list_view.php" />
+        <option value="$PROJECT_DIR$/application/models/Base_model.php" />
+        <option value="$PROJECT_DIR$/application/views/attendance_details_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/View.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-18" />
+    <option name="y" value="-14" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spm" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b23a0afe-9225-41f4-bde6-188709fa22ae" name="Default" comment="" />
+      <created>1505884911489</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1505884911489</updated>
+      <workItem from="1505884917428" duration="4110000" />
+      <workItem from="1509360321419" duration="994000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5104000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1913767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20272315" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/attendance_list_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="14" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Base_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9468">
+          <caret line="526" column="43" lean-forward="true" selection-start-line="526" selection-start-column="43" selection-end-line="526" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7056">
+          <caret line="392" column="0" lean-forward="true" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/attendance_details_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#5#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8388">
+          <caret line="466" column="116" lean-forward="false" selection-start-line="466" selection-start-column="116" selection-end-line="466" selection-end-column="116" />
+          <folding>
+            <marker date="1505971836198" expanded="true" signature="927:1253" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="1616:1657" ph="SELECT * FRO... employee" />
+            <marker date="1505971836198" expanded="true" signature="1968:2294" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="2721:3047" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="3444:3486" ph="SELECT * FRO... td_admin" />
+            <marker date="1505971836198" expanded="true" signature="3699:4025" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="4372:4414" ph="SELECT * FRO... td_service" />
+            <marker date="1505971836198" expanded="true" signature="4500:4542" ph="SELECT * FRO... td_media_type" />
+            <marker date="1505971836198" expanded="true" signature="4628:4689" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="4751:4813" ph="SELECT * FRO... td_size" />
+            <marker date="1505971836198" expanded="true" signature="4877:4917" ph="SELECT * FRO... td_client" />
+            <marker date="1505971836198" expanded="true" signature="5151:5477" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="5657:5693" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="5916:6242" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="6422:6465" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="6817:6898" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="6959:7039" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="7817:7898" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="7962:8041" ph="SELECT * FRO... ${$tbl}" />
+            <marker date="1505971836198" expanded="true" signature="8887:8967" ph="SELECT * FRO... ${$tbl}" />
+            <marker date="1505971836198" expanded="true" signature="9174:9500" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="9680:9725" ph="SELECT * FRO... td_landlord" />
+            <marker date="1505971836198" expanded="true" signature="9977:10001" ph="SELECT * FRO... td_trading" />
+            <marker date="1505971836198" expanded="true" signature="10316:10642" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="11075:11401" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="11812:12138" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="12549:12875" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="13292:13618" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="14035:14361" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="14779:15105" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="15528:15854" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16220:16266" ph="select * fro... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16297:16623" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16966:17292" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="17475:17638" ph="select * fro... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="17755:17832" ph="select * fro... td_client" />
+            <marker date="1505971836198" expanded="true" signature="17893:17973" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="18230:18272" ph="select * fro... td_client" />
+            <marker date="1505971836198" expanded="true" signature="18336:18502" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="18533:18859" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="19194:19520" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="19703:19727" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="19944:20270" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="20450:20474" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="20528:20858" ph="select sa.*,... td_account" />
+            <marker date="1505971836198" expanded="true" signature="20952:21282" ph="select sa.*,... td_account" />
+            <marker date="1505971836198" expanded="true" signature="21672:21998" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="22181:22205" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="22270:22353" ph="select disti... td_account" />
+            <marker date="1505971836198" expanded="true" signature="22418:22515" ph="select disti... td_account" />
+            <marker date="1505971836198" expanded="true" signature="22824:23150" ph="select sa.*,... td_service_assign" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5cdd3201-681d-44cd-9301-c6fa02f5c2a0/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7056">
+          <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/attendance_list_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="14" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/attendance_details_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="46" column="56" lean-forward="false" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#5#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Base_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9468">
+          <caret line="526" column="43" lean-forward="false" selection-start-line="526" selection-start-column="43" selection-end-line="526" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9812">
+          <caret line="476" column="0" lean-forward="true" selection-start-line="476" selection-start-column="0" selection-end-line="486" selection-end-column="56" />
+          <folding>
+            <marker date="1505971836198" expanded="true" signature="927:1253" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="1616:1657" ph="SELECT * FRO... employee" />
+            <marker date="1505971836198" expanded="true" signature="1968:2294" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="2721:3047" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="3444:3486" ph="SELECT * FRO... td_admin" />
+            <marker date="1505971836198" expanded="true" signature="3699:4025" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="4372:4414" ph="SELECT * FRO... td_service" />
+            <marker date="1505971836198" expanded="true" signature="4500:4542" ph="SELECT * FRO... td_media_type" />
+            <marker date="1505971836198" expanded="true" signature="4628:4689" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="4751:4813" ph="SELECT * FRO... td_size" />
+            <marker date="1505971836198" expanded="true" signature="4877:4917" ph="SELECT * FRO... td_client" />
+            <marker date="1505971836198" expanded="true" signature="5151:5477" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="5657:5693" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="5916:6242" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="6422:6465" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="6817:6898" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="6959:7039" ph="SELECT * FRO... td_order" />
+            <marker date="1505971836198" expanded="true" signature="7817:7898" ph="SELECT * FRO... td_area" />
+            <marker date="1505971836198" expanded="true" signature="7962:8041" ph="SELECT * FRO... ${$tbl}" />
+            <marker date="1505971836198" expanded="true" signature="8887:8967" ph="SELECT * FRO... ${$tbl}" />
+            <marker date="1505971836198" expanded="true" signature="9174:9500" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="9680:9725" ph="SELECT * FRO... td_landlord" />
+            <marker date="1505971836198" expanded="true" signature="9977:10001" ph="SELECT * FRO... td_trading" />
+            <marker date="1505971836198" expanded="true" signature="10316:10642" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="11075:11401" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="11812:12138" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="12549:12875" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="13292:13618" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="14035:14361" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="14779:15105" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="15528:15854" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16220:16266" ph="select * fro... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16297:16623" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="16966:17292" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="17475:17638" ph="select * fro... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="17755:17832" ph="select * fro... td_client" />
+            <marker date="1505971836198" expanded="true" signature="17893:17973" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="18230:18272" ph="select * fro... td_client" />
+            <marker date="1505971836198" expanded="true" signature="18336:18502" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="18533:18859" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="19194:19520" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="19703:19727" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="19944:20270" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="20450:20474" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="20528:20858" ph="select sa.*,... td_account" />
+            <marker date="1505971836198" expanded="true" signature="20952:21282" ph="select sa.*,... td_account" />
+            <marker date="1505971836198" expanded="true" signature="21672:21998" ph="select sa.*,... td_service_assign" />
+            <marker date="1505971836198" expanded="true" signature="22181:22205" ph="select * fro... td_service" />
+            <marker date="1505971836198" expanded="true" signature="22270:22353" ph="select disti... td_account" />
+            <marker date="1505971836198" expanded="true" signature="22418:22515" ph="select disti... td_account" />
+            <marker date="1505971836198" expanded="true" signature="22824:23150" ph="select sa.*,... td_service_assign" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="169" column="8" lean-forward="true" selection-start-line="169" selection-start-column="8" selection-end-line="169" selection-end-column="8" />
+          <folding>
+            <element signature="n#MediaType#0;n#Delete#0;n#!!top" expanded="false" />
+            <element signature="n#Client#0;n#Delete#0;n#!!top" expanded="false" />
+            <element signature="n#Project#0;n#Delete#0;n#!!top" expanded="false" />
+            <element signature="n#ServiceAssign#0;n#Delete#0;n#!!top" expanded="false" />
+            <element signature="n#deleteemployee#0;n#Delete#0;n#!!top" expanded="false" />
+            <marker date="1505293987781" expanded="true" signature="849:891" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="1100:1139" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="1347:1385" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="1593:1630" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="1852:1898" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="2114:2154" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="2367:2407" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="2615:2647" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="2854:2892" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="3104:3147" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="3365:3409" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="3621:3657" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="3861:3897" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="4106:4142" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="4356:4398" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="4605:4645" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="4851:4889" ph="delete from " />
+            <marker date="1505293987781" expanded="true" signature="5105:5149" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
