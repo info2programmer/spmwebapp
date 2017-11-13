@@ -687,6 +687,14 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   }
 
 
+  // This function to Delete Employee
+  public function delete_employee($id)
+  {
+    $this->db->where('emp_id_auto', $id);
+    $this->db->delete('employee');
+  }
+
+
 }
 
 ?>

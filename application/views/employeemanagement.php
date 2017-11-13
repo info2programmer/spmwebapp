@@ -520,7 +520,7 @@ $(window).keyup(function(e){
              <a target="_blank" href="<?php echo base_url() ?>edit/Employee/<?php echo $empldtl['emp_id_auto'];?>">   
              <button class="btn btn-primary btn-xs">Edit</button>
              </a>
-              <a href="<?php echo base_url();?>delete/deleteemployee/<?php echo $empldtl['emp_id_auto'];?>" onclick="return confirm('Are You Want To Delete ?');" target="_blank"><button class="btn btn-danger btn-xs">Delete</button></a></td>
+              <a href="<?php echo base_url();?>delete/deleteemployee/<?php echo $empldtl['emp_id_auto'];?>" onclick="return confirm('Are You Want To Delete ?');" ><button class="btn btn-danger btn-xs">Delete</button></a></td>
         </tr>
         <?php $i++;} ?>
 
