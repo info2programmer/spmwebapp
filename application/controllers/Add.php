@@ -1574,6 +1574,7 @@ class Add extends CI_Controller {
 
 		$fulldays=$this->input->post('empfullday');
 		$half_days=$this->input->post('emphalfday');
+		$over_time=$this->input->post('empovertime');
 
 	 // print_r($fullday);
 	 // echo "<br>";
@@ -1581,12 +1582,17 @@ class Add extends CI_Controller {
 
 	 //This Section For Full Day attendance
 		foreach ($fulldays as $day => $value) {
-			$this->base_model->do_attendance($value,1,0);
+			$this->base_model->do_attendance($value,1,0,0);
 		}
 
 	 //This Loop For Half Day
 		foreach ($half_days as $day => $value) {
-			$this->base_model->do_attendance($value,0,1);
+			$this->base_model->do_attendance($value,0,1,0);
+		}
+
+		// This Loop For Overtime
+		foreach ($over_time as $key => $value) {
+			$this->base_model->do_attendance($value,0,0,1);
 		}
 
 		$this->session->set_flashdata('success_log', 'Attendance Submited Successfully');
@@ -1644,7 +1650,7 @@ class Add extends CI_Controller {
 
 		if($emp_id!="")
 		{
-			$plant=explode('-', $ddlPlant)
+			$plant=explode('-', $ddlPlant);
 			$this->base_model->transfer_worker($plant[0],$emp_id);
 			$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
 			redirect('Index/transfer_worker','refresh');

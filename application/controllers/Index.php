@@ -117,14 +117,19 @@ class Index extends CI_Controller {
 		}
 
 		else{
+			// echo "<script>alert();</script>";
 			$result=$this->base_model->checkcredential($uname,md5($pass));
+
+			// var_dump($result);
+			// die;
 
 			if($result){
 				$data=array(
 					'user' => $result,
 					'userphone' => $uname,
 					'password' => $pass,
-					'type' => 'supervisor'
+					'type' => 'supervisor',
+					'total_worker' => $this->base_model->total_worker_by_plant_id($result)
 				);
 				$this->session->set_userdata($data);
 				redirect(base_url().'Index/Home');
@@ -148,6 +153,7 @@ class Index extends CI_Controller {
 	{
 		if ( isset($_SESSION['user'])) {
 			$data['empDtl'] = $this->db->query('SELECT * FROM employee ORDER BY emp_id_auto DESC')->num_rows();
+			$data['totalFactorys'] = $this->db->query('SELECT factory_id FROM tbl_factory')->num_rows();
 			$this->load->view('home',$data);
 		}
 		else {
@@ -368,15 +374,15 @@ class Index extends CI_Controller {
 	{
 		$data['worker_list'] = $this->base_model->getassignworkerlistbysupervisor();
 		$data['do_attandance'] = $this->base_model->check_attandance();
-		if($this->base_model->check_plant_id()->num_rows() > 0){
-			// echo $this->db->last_query();
-			// die;
-			$this->load->view('plant_employee_id_view',$data);
-		}
-		else{
+		// if($this->base_model->check_plant_id()->num_rows() > 0){
+		// // 	// echo $this->db->last_query();
+		// // 	// die;
+		// 	$this->load->view('plant_employee_id_view');
+		// }
+		// else{
 			$this->load->view('worker_attendance_view',$data);
-		}
-
+		// }
+		
 	}
 
 

@@ -464,7 +464,7 @@ public function auth_supervisor_last_login($txt_username,$txt_password)
 public function getassignworkerlistbysupervisor()
 {
   $this->db->where('status', 1);
-  $this->db->where('supervisor_id', $this->session->userdata('user'));
+  $this->db->where('plant_id', $this->session->userdata('user'));
   $this->db->select('tbl_work_assign.*,employee.fname,employee.lname,employee.category,employee.mob_no,employee.emp_id_auto');
   $this->db->from('tbl_work_assign');
   $this->db->join('employee', 'employee.emp_id_auto = tbl_work_assign.employee_id', 'INNER');
@@ -474,13 +474,15 @@ public function getassignworkerlistbysupervisor()
 
 
 //this function for do attendance
-public function do_attendance($emp_id,$full_day,$half_day)
+public function do_attendance($emp_id,$full_day,$half_day,$over_time)
 {
 
   $object=array (
     'employee_id' => $emp_id,
+    'plant_id' => $this->session->userdata('user'),
     'half_day' => $half_day,
     'full_day' => $full_day,
+    'over_time' => $over_time,
     'current_date' => date('Y-m-d'),
     'current_time' => date('H:i:s')
   );
@@ -544,8 +546,7 @@ public function do_attendance($emp_id,$full_day,$half_day)
     public function check_plant_id()
     {
       $this->db->where('status', 1);
-      $this->db->where('supervisor_id', $this->session->userdata('user'));
-      $this->db->where('plant_emp_id', '');
+      $this->db->where('plant_id', $this->session->userdata('user'));
       $this->db->select('tbl_work_assign.*,employee.fname,employee.lname,employee.category,employee.mob_no,employee.emp_id_auto');
       $this->db->from('tbl_work_assign');
       $this->db->join('employee', 'employee.emp_id_auto = tbl_work_assign.employee_id', 'INNER');
@@ -673,6 +674,16 @@ public function do_attendance($emp_id,$full_day,$half_day)
     $this->db->where_in('emp_id_auto', $worker_id);
     $object['plant_name'] = $plant_id;
     $this->db->update('employee', $object);
+  }
+
+
+  // Get total worker by plant id
+  public function total_worker_by_plant_id($plant_id)
+  {
+    $this->db->where('plant_id', $plant_id);
+    $this->db->where('status', 1);
+    $query=$this->db->get('tbl_work_assign');
+    return $query->num_rows();
   }
 
 
