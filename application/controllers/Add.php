@@ -141,7 +141,7 @@ class Add extends CI_Controller {
 				'area' => $txtArea,
 				'category' => $ddlCategory,
 				'contractor_name' => $txtcontractor,
-				'plant_name' => $txtPlant,
+				'plant_name' => $ddlSelectPlant,
 				'regno' => $emp_id,
 				'email' => $txtEmail,
 				'age' => $txtAge,
@@ -175,13 +175,13 @@ class Add extends CI_Controller {
 			);
 			$service = $this->base_model->form_post('employee',$fields);
 			if($increment_date!=""){
-				$this->base_model->log_uniform('Incriment Done',$emp_id);
+				$this->base_model->log_uniform($increment_date,'Incriment Done',(int)str_replace('SPM/EMP/','',$emp_id));
 			}
 			if($txtUniformDate!=""){
-				$this->base_model->log_uniform('Uniform Payment Done',$emp_id);
+				$this->base_model->log_uniform($txtUniformDate,'Uniform Payment Done',(int)str_replace('SPM/EMP/','',$emp_id));
 			}
 			if($txtShoeDate!=""){
-				$this->base_model->log_uniform('Shoe Payment Done',$emp_id);
+				$this->base_model->log_uniform($txtShoeDate,'Shoe Payment Done',(int)str_replace('SPM/EMP/','',$emp_id));
 			}
 			
 			if($service)
