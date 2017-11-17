@@ -1662,7 +1662,20 @@ class Add extends CI_Controller {
 		
 	}
 
+	// This Function For Attendance 
+	public function previous_attendance()
+	{
+		$emp_id=$this->input->post('emp_id');
+		$txtPlantId=$this->input->post('txtPlantId');
+		$txtDateAttendance=$this->input->post('txtDateAttendance');
 
+		foreach ($this->input->post('emp_id') as $worker_list) {
+			$this->base_model->previous_attendance($worker_list,$txtPlantId,$txtDateAttendance);
+		}
+
+		$this->session->set_flashdata('success_log', 'Worker Attendance Submit Successfully');
+		redirect('Index/previous_attendance','refresh');
+	}
 
 
 }

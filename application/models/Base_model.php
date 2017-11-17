@@ -694,6 +694,21 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
     $this->db->delete('employee');
   }
 
+  // This Function For Previous Attendance
+  public function previous_attendance($emp_id,$plant_id,$date)
+  {
+    $object=array (
+      'employee_id' => $emp_id,
+      'plant_id' => $plant_id,
+      'half_day' => 0,
+      'full_day' => 1,
+      'over_time' => 0,
+      'current_date' => $date,
+      'current_time' => date('H:i:s')
+    );
+    $this->db->insert('tbl_attendance', $object);
+  }
+
 
 }
 

@@ -472,6 +472,28 @@ class Index extends CI_Controller {
 		$this->load->view('transfer_worker', $data);
 	}
 
+	// This Function For Previous Attendance
+	public function previous_attendance()
+	{	
+		if ($this->input->post('btnSubmit') == 'search') {
 
+			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+			$plant=explode('-', $ddlPlant);
+
+			$data=array(
+				'listing_data' => $this->base_model->worker_listing($plant[0],""),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result(),
+				'plant_name' => $plant[1],
+				'plant_id' => $plant[0],
+				'search_type' => ''
+			);
+		}
+		else{
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result()
+			);
+		}
+		$this->load->view('previous_attendance_view',$data);
+	}
 
 }

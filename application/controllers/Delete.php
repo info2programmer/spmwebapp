@@ -24,7 +24,6 @@ public function deleteemployee($id)
 {
 	$id=$this->security->xss_clean($id);
 	$this->base_model->delete_employee($id);
-
 	$this->session->flashdata('error_log','Employee Delete Successfully');
 	redirect('Index/Employee');	
 }
