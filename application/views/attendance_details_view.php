@@ -92,8 +92,8 @@
                             <?php foreach ($salaryview as $salary): ?>
                                <?php $totalSalary=$salary->basic_salary+$salary->ca+$salary->hra+$salary->dla ?>
                                 <tr><!-- 
-                                    <td><?php echo $salary->half ?></td>
-                                    <td><?php echo $salary->full ?></td> -->
+                                    <td><?php //echo $salary->half ?></td>
+                                    <td><?php //echo $salary->full ?></td> -->
                                     <td><?php echo $salary->fname." ".$salary->lname ?></td>
                                     <td><?php echo ($totalSalary*$salary->half)/2+($totalSalary*$salary->full) ?></td>
                                 </tr>                                

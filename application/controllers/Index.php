@@ -496,4 +496,11 @@ class Index extends CI_Controller {
 		$this->load->view('previous_attendance_view',$data);
 	}
 
+
+	// This Function To Attendance Report View
+	public function attendance_report()
+	{
+		# code...
+	}
+
 }

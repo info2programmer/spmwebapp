@@ -59,52 +59,64 @@
 
 								<td >
 									<?php if(date('d')==1): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+									<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?>
 								</td>
 
 								<td><?php if(date('d')==2): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==3): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==4): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==5): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==6): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==7): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==8): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==9): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==10): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==11): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==12): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
 								<input type="checkbox" name="empovertime[]"  title="Over Time"  value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
@@ -114,74 +126,92 @@
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==14): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==15): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
-
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
+	
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==16): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==17): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==18): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==19): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==20): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==21): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==22): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==23): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==24): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==25): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==26): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==27): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==28): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==29): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==30): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==31): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
+								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 							</tr>

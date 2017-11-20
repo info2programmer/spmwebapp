@@ -1592,7 +1592,7 @@ class Add extends CI_Controller {
 
 		// This Loop For Overtime
 		foreach ($over_time as $key => $value) {
-			$this->base_model->do_attendance($value,0,0,1);
+			$this->base_model->update_overtime($value);
 		}
 
 		$this->session->set_flashdata('success_log', 'Attendance Submited Successfully');

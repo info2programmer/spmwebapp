@@ -710,6 +710,16 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   }
 
 
+  // This function to update overtime
+  public function update_overtime($emp_id)
+  {
+    $this->db->where('employee_id',$emp_id);
+    $this->db->where('current_date', date('Y-m-d'));
+    $object['over_time'] = 1;
+    $this->db->update('tbl_attendance', $object);
+  }
+
+
 }
 
 ?>
