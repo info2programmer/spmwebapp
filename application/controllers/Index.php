@@ -527,5 +527,39 @@ class Index extends CI_Controller {
 		// $this->load->view('attendance_report_view');
 	}
 
+	// This Function To Salary Report View
+	public function salary_report()
+	{
+		if($this->input->post('btnSubmit') == "submit")
+		{
+			// Get All Data
+			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+			$plant=explode('-', $ddlPlant);
+			$txtFromDate=$this->security->xss_clean($this->input->post('txtFromDate'));
+			$txtToDate=$this->security->xss_clean($this->input->post('txtToDate'));
+
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result(),
+				'report_list' => $this->base_model->salary_report($txtFromDate,$txtToDate,$plant[0]),
+				'from_date' => $txtFromDate,
+				'to_date' => $txtToDate,
+				'plant_name' => $plant[1]
+ 
+			);
+		}
+		else{
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
+			);
+		}
+		
+		$this->load->view('salary_index_view', $data);
+		// $data=array(
+		// 		'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
+		// 	);
+		// 	$this->load->view('salary_index_view', $data);
+		
+	}
+
 
 }
