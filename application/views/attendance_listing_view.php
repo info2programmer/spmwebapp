@@ -69,7 +69,7 @@
         </div>
         <br />
 
-        <button class="btn btn-lg btn-success btn-block" name="btnSubmit" value="search" type="submit">Search Workers</button>
+        <button class="btn btn-lg btn-success btn-block" name="btnSubmit" value="search" type="submit">Generate Report</button>
         <?php echo form_close(); ?>
       </div>
 
