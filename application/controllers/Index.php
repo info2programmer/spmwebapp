@@ -500,7 +500,32 @@ class Index extends CI_Controller {
 	// This Function To Attendance Report View
 	public function attendance_report()
 	{
-		# code...
+		if ($this->input->post('btnSubmit') == 'search') {
+			// Get All Data in a variable
+			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
+			$plant=explode('-', $ddlPlant);
+			$txtMonth=$this->input->post('txtMonth');
+			// $txtToDate=$this->input->post('txtToDate');
+			// var_dump($this->base_model->attendance_report($txtMonth,$plant[0]));
+
+			$data=array(
+				'plant_name' => $plant[1],
+				'plant_id' => $plant[0],
+				'month_year' => $txtMonth,
+				'attendance_list' => $this->base_model->attendance_report($txtMonth,$plant[0]),
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result()
+			);
+			// var_dump($this->base_model->attendance_report($txtMonth,$plant[0])); 
+		}
+		else{
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result()
+			);
+		}
+		
+		$this->load->view('attendance_listing_view',$data);
+		// $this->load->view('attendance_report_view');
 	}
+
 
 }

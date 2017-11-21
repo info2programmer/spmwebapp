@@ -720,6 +720,21 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   }
 
 
+  // This Function To get attendance report
+  public function attendance_report($date,$plant)
+  {
+    // $this->db->where('Field / comparison', $Value);
+    $this->db->like('current_date', $date, 'BOTH');
+    $this->db->where('plant_id', $plant);
+    $this->db->select('SUM(full_day) as full_day,SUM(half_day) as half_day,SUM(over_time) as over_timer,SUM(full_day)+SUM(half_day) as total_days,employee_id,fname,lname');
+    $this->db->from('tbl_attendance');
+    $this->db->join('employee', 'employee.emp_id_auto = tbl_attendance.employee_id', 'INNER');
+    $this->db->group_by('tbl_attendance.employee_id');
+    $query=$this->db->get();
+    return $query->result();
+  }
+
+
 }
 
 ?>
