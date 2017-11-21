@@ -324,6 +324,8 @@ class Index extends CI_Controller {
 				$txtUsername=$this->security->xss_clean($this->input->post('txtUsername'));
 				$txtPassword=$this->security->xss_clean($this->input->post('txtPassword'));
 				$txtWorkingHours=$this->security->xss_clean($this->input->post('txtWorkingHours'));
+				$txtOverTime=$this->security->xss_clean($this->input->post('txtOverTime'));
+				$txtOverTimeAmount=$this->security->xss_clean($this->input->post('txtOverTimeAmount'));
 
 				$this->form_validation->set_rules('txtUsername', 'Username', 'trim|required|is_unique[tbl_factory.username]');
 				if ($this->form_validation->run() == FALSE) {
@@ -346,7 +348,9 @@ class Index extends CI_Controller {
 						'status' => 1,
 						'pan_no' => $txtPanNo,
 						'gstin' => $txtGSTIN,
-						'working_hours' => $txtWorkingHours
+						'working_hours' => $txtWorkingHours,
+						'overtime_hr' => $txtOverTime,
+						'overtime_amount' => $txtOverTimeAmount
 					);
 
 					$this->base_model->form_post('tbl_factory',$object);
@@ -357,7 +361,7 @@ class Index extends CI_Controller {
 			}
 
 
-			$this->load->view('plant_details_view',$data);
+		$this->load->view('plant_details_view',$data);
 
 
 		}

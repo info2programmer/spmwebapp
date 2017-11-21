@@ -24,6 +24,9 @@
 		$txtUsername=$edit_data[0]['username'];
 		$txtPassword=$edit_data[0]['pass_org'];
 		$txtWorkingHours=$edit_data[0]['working_hours'];
+		$txtOverTime=$edit_data[0]['overtime_hr'];
+		$txtOverTimeAmount=$edit_data[0]['overtime_amount'];
+
 	}
 	else{
 		$txtPlant='';
@@ -39,6 +42,8 @@
 		$txtUsername='';
 		$txtPassword='';
 		$txtWorkingHours='';
+		$txtOverTime='';
+		$txtOverTimeAmount='';
 	}
 
 	?>
@@ -81,6 +86,12 @@
 
 		<label>Working Hours</label>
 		<input type="number" value="<?php echo $txtWorkingHours ?>" name="txtWorkingHours" value=""  class="form-control" id="txtWorkingHours" placeholder="Working Hours">
+
+		<label>Overtime Hours</label>
+		<input type="number" value="<?php echo $txtOverTime ?>" name="txtOverTime" value=""  class="form-control" id="txtOverTime" placeholder="Working Hours">
+
+		<label>Overtime Amount</label>
+		<input type="number" value="<?php echo $txtOverTimeAmount ?>" name="txtOverTimeAmount" value=""  class="form-control" id="txtOverTimeAmount" placeholder="Working Hours">
 
 		<label>Plant GSTIN</label>
 		<input type="text" value="<?php echo $txtGSTIN ?>" name="txtGSTIN" value=""  class="form-control" id="txtGSTIN" placeholder="Plant GSTIN ">
