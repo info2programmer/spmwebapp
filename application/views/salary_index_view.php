@@ -80,6 +80,7 @@
 				<th>Over Time</th>
 				<th>Days For Salary</th>
 				<th>Basic Salary</th>
+				<th>Overtime Amount</th>
 				<th>House Rent</th>
 				<th>EPF</th>
 				<th>ESI</th>
@@ -90,18 +91,23 @@
 			<?php $count=0; ?>
 			<?php foreach ($report_list as $list): ?>
 				<tr>
+					<?php 
+						$over_time_amt=$list->over_timer*$list->overtime_amount; 
+						$total_salaty_day=$list->full_day+($list->half_day/2);
+					?>
 					<td><?php echo ++$count; ?></td>
 					<td>SPM/EMP/<?php echo $list->employee_id ?></td>
 					<td><?php echo $list->fname." ".$list->lname ?></td>
 					<td><?php echo $list->full_day ?> </td>
 					<td><?php echo $list->half_day ?> </td>
 					<td><?php echo $list->over_timer ?> </td>
-					<td><?php echo $list->full_day+($list->half_day/2) ?> </td>
+					<td><?php echo $total_salaty_day ?> </td>
 					<td><?php echo $list->base_sal ?> </td>
+					<td><?php echo $over_time_amt ?> </td>
 					<td><?php echo $list->house_rent ?> </td>
 					<td><?php echo $list->emp_epf ?> </td>
 					<td><?php echo $list->emp_esi ?> </td>
-					<td><?php echo ($list->full_day+($list->half_day/2))*($list->base_sal+$list->house_rent-$list->emp_epf-$list->emp_esi) ?></td>
+					<td><?php echo ($total_salaty_day*$list->base_sal)+$list->house_rent-$list->emp_epf-$list->emp_esi+$over_time_amt?></td>
 				</tr>
 			<?php endforeach ?>
 		</tbody>
