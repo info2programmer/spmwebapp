@@ -115,7 +115,7 @@
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>
 
 								<td><?php if(date('d')==12): ?><input type="checkbox" name="empfullday[]"  title="Full Day"  value="<?php echo $key->employee_id; ?>"><input name="emphalfday[]"  title="Half Day" type="checkbox" value="<?php echo $key->employee_id; ?>">
-								<input type="checkbox" name="empovertime[]"  title="Over Time"  value="<?php echo $key->employee_id; ?>">
+								<!-- <input type="checkbox" name="empovertime[]"  title="Over Time"  value="<?php //echo $key->employee_id; ?>"> -->
 								<input name="empovertime[]"  title="OverTime" type="checkbox" value="<?php echo $key->employee_id; ?>">
 
 									<?php else: ?><input disabled type="checkbox"  title="Full Day"  value=""><input disabled  title="Half Day" type="checkbox" value=""><input disabled  title="Over Time" type="checkbox" value=""><?php endif; ?></td>

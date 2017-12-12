@@ -64,13 +64,21 @@ class Add extends CI_Controller {
 			$increment_date = $this->input->post('increment_date');
 			$inc_rate = $this->input->post('inc_rate');
 			$nxt_inc = $this->input->post('nxt_inc');
-			$imges = $_FILES["photo"]["name"];
-			$exp = explode('.',$imges);
-			$image = $exp[0].time().'.'.$exp[1];
-			$temp = $_FILES["photo"]["tmp_name"];
+			if(!empty($_FILES["photo"]["name"]))
+			{
+				$imges = $_FILES["photo"]["name"];
+				$exp = explode('.',$imges);
+				$image = $exp[0].time().'.'.$exp[1];
+				$temp = $_FILES["photo"]["tmp_name"];
+				// Image Upload Here
+				$this->base_model->news_file_upload($image,$temp);
+			}
+			else{
+				$image="N/A";
+			}
+			
 			$txtArea=$this->input->post('txtArea');
 			$ddlCategory=$this->input->post('ddlCategory');
-
 			$txtcontractor=$this->input->post('txtcontractor');
 			$ddlSelectPlant=$this->input->post('ddlSelectPlant');
 			$txtRegno=$this->input->post('txtRegno');
@@ -107,6 +115,7 @@ class Add extends CI_Controller {
 
 			$txtUniformDate=$this->input->post('txtUniformDate');
 			$txtShoeDate=$this->input->post('txtShoeDate');
+			$txtprepaid_card=$this->input->post('txtprepaid_card');
 
 			$fields = array(
 				'fname' => $fname,
@@ -171,7 +180,8 @@ class Add extends CI_Controller {
 				'pre_ps' =>  $txtPresentPS,
 				'pre_pin' => $txtPresentPin,
 				'pre_dis' =>  $txtPresentDis,
-				'mother_name' => $txtMothername
+				'mother_name' => $txtMothername,
+				'prepaid_card'=> $txtprepaid_card
 			);
 			$service = $this->base_model->form_post('employee',$fields);
 			if($increment_date!=""){
@@ -186,7 +196,7 @@ class Add extends CI_Controller {
 			
 			if($service)
 			{
-				$this->base_model->news_file_upload($image,$temp);
+				$this->session->set_flashdata('success_log', 'Employee Add Successfully');				
 				redirect(base_url().'Index/Employee');
 			}
 		}
@@ -1609,34 +1619,51 @@ class Add extends CI_Controller {
 			$txtAssignDate=$this->security->xss_clean($this->input->post('txtAssignDate'));
 			$txtRelease=$this->security->xss_clean($this->input->post('txtRelease'));
 			$txtPlantId=$this->security->xss_clean($this->input->post('txtPlantId'));
+			$emp_id=$this->input->post('emp_id');
+			if($emp_id!="") //Check Employee Selection
+			{
+				foreach ($this->input->post('emp_id') as $worker_list) {
+					$object=array(
+						'from_dare' => $txtAssignDate,
+						'to_date' => $txtRelease,
+						'employee_id' => $worker_list,
+						'plant_id' => $txtPlantId,
+						'status' => 1
+					);
 
-			foreach ($this->input->post('emp_id') as $worker_list) {
-				$object=array(
-					'from_dare' => $txtAssignDate,
-					'to_date' => $txtRelease,
-					'employee_id' => $worker_list,
-					'plant_id' => $txtPlantId,
-					'status' => 1
-				);
+					$this->base_model->assign_worker($object);
+				}
+				
+				$this->base_model->assing_employee_table($this->input->post('emp_id'),1);
 
-				$this->base_model->assign_worker($object);
+				$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
+				redirect('Index/workers_assign','refresh');
+			}
+			else{
+				$this->session->set_flashdata('error_log', 'You did\'t select any worker ');
+				redirect('Index/workers_assign','refresh');
 			}
 
-			$this->base_model->assing_employee_table($this->input->post('emp_id'),1);
+			
 
-			$this->session->set_flashdata('success_log', 'Worker Assign Successfully');
-			redirect('Index/workers_assign','refresh');
 		}
 
 		if($this->input->post('btnSubmit') == 'unassign'){
 			$txtPlantId=$this->security->xss_clean($this->input->post('txtPlantId'));
-
-			foreach ($this->input->post('emp_id') as $worker_list) {
-				$this->base_model->release_worker($txtPlantId,$worker_list);
+			$emp_id=$this->input->post('emp_id');
+			if($emp_id!="") //Check Employee Selection
+			{
+				foreach ($this->input->post('emp_id') as $worker_list) {
+					$this->base_model->release_worker($txtPlantId,$worker_list);
+				}
+				$this->base_model->assing_employee_table($this->input->post('emp_id'),0);
+				$this->session->set_flashdata('success_log', 'Worker Un-Assign Successfully');
+				redirect('Index/workers_assign','refresh');
 			}
-			$this->base_model->assing_employee_table($this->input->post('emp_id'),0);
-			$this->session->set_flashdata('success_log', 'Worker Un-Assign Successfully');
-			redirect('Index/workers_assign','refresh');
+			else{
+				$this->session->set_flashdata('error_log', 'You did\'t select any worker ');
+				redirect('Index/workers_assign','refresh');
+			}
 
 		}
 	}

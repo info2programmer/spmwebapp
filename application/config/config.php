@@ -17,16 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-if(($_SERVER['REMOTE_ADDR']!='192.168.0.4')&&($_SERVER['REMOTE_ADDR']!='192.168.0.15')&&($_SERVER['REMOTE_ADDR']!='192.168.0.5')&&($_SERVER['REMOTE_ADDR']!='192.168.0.9')&&($_SERVER['REMOTE_ADDR']!='192.168.0.14')&&($_SERVER['REMOTE_ADDR']!='192.168.0.10')&&($_SERVER['REMOTE_ADDR']!='192.168.0.13'))
-{
-$config['base_url'] = 'http://localhost/spm/';
 
-}
+$config['base_url'] = 'http://spmgroupindia.com/propayroll';
 
-else
-{
-$config['base_url'] = 'http://192.168.0.8/spm/';
-}
 
 /*
 |--------------------------------------------------------------------------

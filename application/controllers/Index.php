@@ -377,6 +377,8 @@ class Index extends CI_Controller {
 	public function emp_attendance()
 	{
 		$data['worker_list'] = $this->base_model->getassignworkerlistbysupervisor();
+		// echo $this->db->last_query();
+		// die;
 		$data['do_attandance'] = $this->base_model->check_attandance();
 		// if($this->base_model->check_plant_id()->num_rows() > 0){
 		// // 	// echo $this->db->last_query();

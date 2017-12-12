@@ -129,15 +129,11 @@
 								<tr>
 									<th>Sl#</th>
 									<th>Plant Name</th>
-									<th>Location</th>
-									<th>Full Address</th>
-									<th>Pin Code</th>
+									<th>Plant Usernamr</th>
+									<th>Plant Password</th>
 									<th>Plant Phone</th>
 									<th>Email Address</th>
-									<th>PAN No.</th>
-									<th>GSTIN</th>
 									<th>Contact Preson</th>
-									<th>Contact Preson-Phone</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -147,15 +143,11 @@
 									<tr>
 										<td><?php echo ++$count; ?></td>
 										<td><?php echo $list->factory_name ?></td>
-										<td><?php echo $list->location ?></td>
-										<td><?php echo $list->full_address ?> </td>
-										<td><?php echo $list->pin ?> </td>
+										<td><?php echo $list->username ?></td>										
+										<td><?php echo $list->pass_org ?></td>										
 										<td><?php echo $list->phone_number ?> </td>
 										<td><?php echo $list->email_address ?> </td>
-										<td><?php echo $list->pan_no ?> </td>
-										<td><?php echo $list->gstin ?> </td>
 										<td><?php echo $list->contact_person ?> </td>
-										<td><?php echo $list->mobile_number ?> </td>
 										<td>
 											<a href="<?php echo base_url() ?>Edit/Plant/<?php echo $list->factory_id ?>"  class='btn btn-info btn-xs' onclick="return confirm('Are you edit ?')">Edit / View</a>
 											<a href="<?php echo base_url() ?>index.php/Delete/Plant/<?php echo $list->factory_id ?>"  class='btn btn-danger btn-xs' onclick="return confirm('Are you edit ?')">Delete</a> <br>

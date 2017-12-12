@@ -116,6 +116,7 @@ $(window).keyup(function(e){
         $txtEmerygencyRelationship=$edit[0]['emargency_contact_relation'];
         $txtEmargencyContactNumber=$edit[0]['emargency_contact_no'];
         $txtEmergencyAddrss=$edit[0]['emargency_contact_address'];
+        $txtprepaid_card=$edit[0]['prepaid_card'];
         ?>
     <?php else: ?>
         <?php 
@@ -187,6 +188,7 @@ $(window).keyup(function(e){
         $txtEmerygencyRelationship='';
         $txtEmargencyContactNumber='';
         $txtEmergencyAddrss='';
+        $txtprepaid_card='';
         ?>
     <?php endif ?>
 
@@ -195,6 +197,12 @@ $(window).keyup(function(e){
            <div class="row">
             <div class="col-xs-12">
               <h3 class="alert alert-info">Employee Management</h3>
+              <?php if($this->session->flashdata('success_log')): ?>
+                 <div class="alert alert-success"><?php echo $this->session->flashdata('success_log') ?></div>
+              <?php endif; ?>
+              <?php if($this->session->flashdata('error_log')): ?>
+                 <div class="alert alert-danger"><?php echo $this->session->flashdata('error_log') ?></div>
+              <?php endif; ?>
               <h5 class="alert alert-warning"><strong>Personal Details<span class="pull-right">STEP - I</span></strong></h5>
               <?php if (!empty($edit)): ?>
                 <form class="form-grop" id="emp_data" name="emp_data" action="<?php echo base_url();?>edit/Employee/<?php echo $edit[0]['emp_id_auto'] ?> " enctype="multipart/form-data" method="post">
@@ -427,6 +435,10 @@ $(window).keyup(function(e){
             <div class="col-md-2" style="padding-top:5px;">
             <input name="micr_code" id="micr_code" class="form-control" type="text" value="<?php echo $micr_code; ?>" class="micr_code" />
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 text-right">Prepaid Card Number</div>
+            <div class="col-md-10"><input type="text" name="txtprepaid_card" class="form-control" value="<?php echo $txtprepaid_card ?>" ></div>
         </div>
         
         <br /><br /><br />

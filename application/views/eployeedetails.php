@@ -4,9 +4,9 @@
 <head>
   <?php include "include/head.php";?>
   <style type="text/css">
-  <!--
+  
   .style1 {font-size: 24px}
-  -->
+  
 </style>
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
@@ -20,6 +20,23 @@
 
 <body>
   <?php include "include/header.php";?>
+
+  <?php 
+  // This Function For Age Calculate
+  // $dob=$data[0]['dob'];
+  function GetAge($dob) 
+  { 
+          $dob=explode("-",$dob); 
+          $curMonth = date("m");
+          $curDay = date("j");
+          $curYear = date("Y");
+          $age = $curYear - $dob[0]; 
+          if($curMonth<$dob[1] || ($curMonth==$dob[1] && $curDay<$dob[2])) 
+                  $age--; 
+          return $age; 
+  }
+
+  ?>
 
   <section id="mainbody">
     <div class="container">
@@ -62,7 +79,10 @@
               <td><strong>Plant Name</strong> : <?php echo $data[0]['plant_name'];?></td>
               <td><strong>Reg.no.</strong> : <?php echo $data[0]['regno'];?><br /></td>
               <td><strong>Email</strong> : <?php echo $data[0]['email'];?><br /></td>
-              <td><strong>Age</strong> : <?php echo $data[0]['age'];?><br /></td>
+              <?php
+                $age=GetAge($data[0]['dob']);
+              ?>
+              <td><strong>Age</strong> : <?php echo $age; ?><br /></td>
               <td> <strong>Religion</strong> : <?php echo $data[0]['religion'];?> </td>
             </tr>
 
