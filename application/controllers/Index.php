@@ -453,6 +453,11 @@ class Index extends CI_Controller {
 		$this->load->view('workers_assign_view',$data);
 	}
 
+	public function reports()
+	{
+		
+	}
+
 	// This Function For Transfer Worker
 	public function transfer_worker()
 	{

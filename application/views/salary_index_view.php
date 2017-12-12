@@ -107,7 +107,7 @@
 					<td><?php echo $list->house_rent ?> </td>
 					<td><?php echo $list->emp_epf ?> </td>
 					<td><?php echo $list->emp_esi ?> </td>
-					<td><?php echo ($total_salaty_day*$list->base_sal)+$list->house_rent-$list->emp_epf-$list->emp_esi+$over_time_amt?></td>
+					<td><?php echo ($total_salaty_day*$list->base_sal)+$list->house_rent-$list->emp_epf-$list->emp_esi+$over_time_amt ?></td>
 				</tr>
 			<?php endforeach ?>
 		</tbody>
