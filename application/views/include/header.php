@@ -44,7 +44,7 @@
 
                        <li class="navlitxt"><a href="<?php echo base_url();?>Index/previous_attendance" class="dropdown-toggle" role="button">Previous Attendance</a></li>
 
-                        <li class="navlitxt"><a href="<?php echo base_url();?>Index/previous_attendance" class="dropdown-toggle" role="button">Reports</a></li>
+                        <li class="navlitxt"><a href="<?php echo base_url();?>Index/salary_report.html" class="dropdown-toggle" role="button">Reports</a></li>
 
                     <!-- <li class="navlitxt"><a href="leavemanagement.php" class="dropdown-toggle" role="button">Attendance</a></li> -->
                    <!--  <li class="navlitxt"><a href="salary.php" class="dropdown-toggle" role="button">Salary</a></li> -->
