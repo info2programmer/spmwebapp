@@ -679,5 +679,17 @@ class Update extends CI_Controller {
 		$this->base_model->emp_id_update($employeeId,$recordId);
 		echo "done";
 	}
+
+
+	// This Function For Deactive Account User
+	public function ChangeAccountStatus($id,$status)
+	{
+		$object['status']=$status;
+		$this->db->where('id', $id);
+		$this->db->update('tbl_accounts', $object);
+		$this->session->set_flashdata('success_log', 'Account Deactive Successfully');
+		redirect('Index/accountsettings','refresh');
+		
+	}
 	
 }

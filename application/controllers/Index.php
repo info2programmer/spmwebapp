@@ -278,7 +278,8 @@ class Index extends CI_Controller {
 				'supervisorlist' =>'', //$this->base_model->getallsupervisor(),
 				'factory_locations' => $this->base_model->getfactorylocation(),
 				'employeelist' => $this->base_model->getallemployee(),//,
-				'factory_list' => '' //$this->base_model->getsupervisorlist('')
+				'factory_list' => '', //$this->base_model->getsupervisorlist('')
+				'acount_list' => $this->base_model->account_user_list()
 			);
 			// echo $this->db->last_query();
 			//  		die;
@@ -571,6 +572,9 @@ class Index extends CI_Controller {
 		// 	$this->load->view('salary_index_view', $data);
 		
 	}
+
+
+	
 
 
 }

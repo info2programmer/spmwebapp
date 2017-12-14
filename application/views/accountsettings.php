@@ -60,33 +60,49 @@
     </div>
     <!------------------------------------------ separator -------------------------------------->
     <div class="row">
-
-      <?php 
-      if(isset($edit_factory_list)){
-        foreach ($edit_factory_list as $list ) {
-          $txtName=$list->emp_id_auto;
-          $txtMobileNumber=$list->mobile_number;
-          $ddlFactoryLocation=$list->factory_location;
-          $ddlFactoryName=$list->factory_name;
-          $txtPassword=$list->org_password;
-          $record_id=$list->record_id;
-          $txtFromDate=$list->from_date;
-          $txtTodate=$list->to_date;
-        }
-      }
-      else{
-        $txtName='';
-        $txtMobileNumber='';
-        $ddlFactoryLocation='';
-        $ddlFactoryName='';
-        $txtPassword='';
-        $txtFromDate='';
-        $txtTodate='';
-      }
-
-      ?>
-
-</div>
+        <h3 class="alert alert-info">Account User Management</h3>
+        <div class="col-md-12 well" style="padding-bottom:25px;">
+          <h4 style="font-family: 'Oswald', sans-serif;">Create User</h4>
+          <h6 class="form-signin-heading" style="color:red;"><i class="fa fa-info-circle"></i> Create user who will access Acount Section    </h6>
+          <form method="post" accept-charset="utf-8"  action="<?php echo  base_url() ?>Add/CreateAccount" class="form-signin">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa fa-user-o" aria-hidden="true"></i></span>
+            <input type="text" name="txtFullname" id="txtFullname" class="form-control" placeholder="Fullname" required >
+          </div>
+          <br/>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user-secret" aria-hidden="true"></i></span>
+            <input type="text" name="txtUsername" id="txtUsername" class="form-control" placeholder="Username" required >
+          </div>
+          <br/>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+            <input type="password" name="txtPassword" id="txtPassword" class="form-control" placeholder="Password" required >
+          </div>
+          <br/>
+          <button type="submit" name="btnSubmit" class="btn btn-lg btn-success btn-block" value="submit">Create Account</button>
+          </form>
+          <br/>
+          <table class="table table-bordered">
+            <tr>
+              <th>User-Full Name</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Last Login</th>
+              <th>Action</th>
+            </tr>
+              <?php foreach($acount_list as $item): ?>
+                <tr>
+                <td><?php echo $item->fullname ?></td>
+                <td><?php echo $item->username ?></td>
+                <td><?php echo $item->pass_org ?></td>
+                <td><?php echo $item->last_login ?></td>
+                <td><a href="<?php echo base_url() ?>Update/ChangeAccountStatus/<?php echo $item->id ?>/<?php echo ($item->status==1)?'0':'1'; ?>"><i class="fa fa-exclamation-circle"></i></i><?php echo ($item->status==1)?'Deactive':'Active'; ?></a></td>
+                </tr>
+              <?php endforeach; ?>
+          </table>
+        </div>
+    </div>
 </div>
 
 

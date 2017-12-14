@@ -1705,4 +1705,40 @@ class Add extends CI_Controller {
 	}
 
 
+	// This Function For Create Account User
+	public function CreateAccount()
+	{
+		// Get All Data Here 
+		$txtUsername=$this->input->post('txtUsername');
+		$txtPassword=$this->input->post('txtPassword');
+		$txtFullname=$this->input->post('txtFullname');
+
+		// This Function For Form Validation
+		$this->form_validation->set_rules('txtUsername', 'Username', 'trim|required|is_unique[tbl_accounts.username]');
+		$this->form_validation->set_rules('txtPassword', 'Username', 'trim|required');
+		$this->form_validation->set_rules('txtFullname', 'Username', 'trim|required');
+		
+		if ($this->form_validation->run() == FALSE) {
+			// Set Error Message And Send To Main Page
+			
+			$this->session->set_flashdata('error_log', validation_errors());
+			redirect('Index/accountsettings','refresh');
+		} else {
+
+			$object=array(
+			'username' => $txtUsername,
+			'password' => md5($txtPassword),
+			'pass_org' => $txtPassword,
+			'fullname' => $txtFullname,
+			'status' => 1
+			);
+
+			$this->base_model->form_post('tbl_accounts',$object);
+			$this->session->set_flashdata('success_log','Account User Create Successfully');
+			redirect('Index/accountsettings','refresh');
+		}
+		
+	}
+
+
 }

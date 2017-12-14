@@ -756,6 +756,14 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   }
 
 
+  // this function to create account user list
+  public function account_user_list()
+  {
+    $query=$this->db->get('tbl_accounts');
+    return $query->result();
+  }
+
+
 }
 
 ?>
