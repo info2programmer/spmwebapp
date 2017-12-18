@@ -76,7 +76,6 @@ class Index extends CI_Controller {
 						$_SESSION['name'] = $show[0]['name'];
 						$_SESSION['photo'] = $show[0]['photo'];
 						redirect(base_url().'Index/Home');
-
 					}
 					else {
 						redirect(base_url());
@@ -116,7 +115,7 @@ class Index extends CI_Controller {
 			}
 		}
 
-		else{
+		elseif($this->base_model->checkcredential($uname,md5($pass))){
 			// echo "<script>alert();</script>";
 			$result=$this->base_model->checkcredential($uname,md5($pass));
 
@@ -129,6 +128,29 @@ class Index extends CI_Controller {
 					'userphone' => $uname,
 					'password' => $pass,
 					'type' => 'supervisor',
+					'total_worker' => $this->base_model->total_worker_by_plant_id($result)
+				);
+				$this->session->set_userdata($data);
+				redirect(base_url().'Index/Home');
+			}
+			else{
+				$this->session->set_flashdata('error_log', 'Icorrect username and password');
+				redirect(base_url().'?nomatch');
+			}
+		}
+
+		else{
+				$result=$this->base_model->acc_auth($uname,md5($pass));
+
+			// var_dump($result);
+			// die;
+
+			if($result){
+				$data=array(
+					'user' => $result,
+					'userphone' => $uname,
+					'password' => $pass,
+					'type' => 'account-user',
 					'total_worker' => $this->base_model->total_worker_by_plant_id($result)
 				);
 				$this->session->set_userdata($data);

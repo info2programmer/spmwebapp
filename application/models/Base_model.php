@@ -764,6 +764,23 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   }
 
 
+  // this function for check username and password for account-user
+  public function acc_auth($user_name,$password)
+  {
+    $this->db->where('username', $user_name);
+    $this->db->where('password', $password);
+
+    $result=$this->db->get('tbl_accounts');
+    if($result->num_rows()>0){
+      return true;
+    }
+    else{
+      return false;
+    }
+    
+  }
+
+
 }
 
 ?>
