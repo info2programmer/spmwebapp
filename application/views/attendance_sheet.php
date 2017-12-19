@@ -83,8 +83,6 @@
 		
 		<table width="100%" border="1" cellspacing="1" cellpadding="1" class="my_table" style="border-collapse:collapse; clear:both;">
 			<tbody><tr>
-				<td width="20" rowspan="2"><strong>Sl No.</strong></td>
-				<td width="52" rowspan="2"><strong>Roll No.</strong></td>
 				<td width="190" rowspan="2" style="text-align:left; padding-left:5px;"><strong>NAME</strong></td>
 				<td width="27"><strong>Sig.</strong></td>
 				<td width="11">&nbsp;</td>
@@ -153,48 +151,46 @@
 				<td width="12">30</td>
 				<td width="33">31</td>
 			</tr>
-			<?php //$this->student_model->get_report($Stream_Id,$Subject,$Year,0);
-					//echo $this->db->last_query();
-					//die;
-			$counter=0;
-			// $item=$this->student_model->get_report($Stream_Id,$Subject,$Year,0);
+			<?php 
+			
+			$attdnc_list_new = $this->db->query("SELECT * FROM `tbl_attendance` WHERE `current_date` >= '".$fromDate."' AND `current_date` <= '".$toDate."' AND `plant_id` = '".$plant_id."' GROUP BY employee_id")->result_array();
 			?>
-			<?php foreach($employee_list as $list_item): ?>
+			<?php 
+			foreach($attdnc_list_new as $list_item): 
+				
+				$emp_dtl = $this->db->query("SELECT * FROM `employee` WHERE  `emp_id_auto` = '".$list_item['employee_id']."'")->result_array();
+				
+				?>
 				<tr>
-					<td width="20"><?php echo ++$counter; ?></td>
-					<td width="52"><?php echo $counter; ?></td>
-					<td colspan="2" style="text-align:left; padding-left:5px;"><?php echo $list_item->fname." ".$list_item->lname; ?></td> 
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="11">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="12">&nbsp;</td>
-					<td width="33">&nbsp;</td>
+					<td colspan="2" style="text-align:left; padding-left:5px;"><?php echo $emp_dtl[0]['fname']." ".$emp_dtl[0]['lname']; ?></td> 
+				
+				
+				<?php
+					
+						//$attdnc_listwwww = $this->db->query("SELECT * FROM `tbl_attendance` WHERE `current_date` >= '".$fromDate."' AND `current_date` <= '".$toDate."' AND `plant_id` = '".$plant_id."' AND employee_id='".$list_item['employee_id']."'")->result_array();
+
+						//$attdnc_list_cnt = $this->db->query("SELECT * FROM `tbl_attendance` WHERE `current_date` >= '".$fromDate."' AND `current_date` <= '".$toDate."' AND `plant_id` = '".$plant_id."' AND employee_id='".$list_item['employee_id']."'")->num_rows();
+						//$blkcnt = 1;
+						 
+						//echo $fromDate;die;
+							for($i=1;$i<=31;$i++)
+								{	
+								$checkDate = explode("-",$fromDate);
+								$newday = str_pad($i,2,'0',STR_PAD_LEFT);
+								$new_date = $checkDate[0].'-'.$checkDate[1].'-'.$newday;
+								if($new_date<=$toDate){
+								$attdnc_list = $this->db->query("SELECT * FROM `tbl_attendance` WHERE `current_date` = '".$new_date."' AND `plant_id` = '".$plant_id."' AND employee_id='".$list_item['employee_id']."'")->num_rows();	
+									echo '<td width="11">';
+									if($attdnc_list >0){
+										echo 'P';
+									} else {
+										echo 'A';
+									}
+									echo '</td>';
+								}	 
+								}
+						
+				?>
 				</tr>
 				<?php endforeach; ?>
 				</div>

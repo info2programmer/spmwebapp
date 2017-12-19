@@ -788,14 +788,20 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
     
   }
 
-  // // this function for attendance report by date and plant id
-  // public function attendance_data($txtFromDate,$txtToDate,$ddlPlantId)
-  // {
-  //   $this->db->where('current_date>=', $txtFromDate);
-  //   $this->db->where('current_date<=', $txtToDate);
-  //   $this->db->where('plant_id<=', $ddlPlantId);
+  // this function for attendance report by date and plant id and employee id
+  public function attendance_data($txtFromDate,$txtToDate,$ddlPlantId,$emp_id)
+  {
+    $this->db->where('current_date>=', $txtFromDate);
+    $this->db->where('current_date<=', $txtToDate);
+    $this->db->where('plant_id', $ddlPlantId);
+    $this->db->where('employee_id', $emp_id);
+
+    $this->db->order_by('current_date', 'ASC');
+  
+    $query=$this->db->get('tbl_attendance');
     
-  // }
+    return $query->result_array();
+  }
 
   // this function for get all employee by plant id and date range
   public function empdata_for_attendance($txtFromDate,$txtToDate,$ddlPlantId)

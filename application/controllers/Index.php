@@ -606,10 +606,13 @@ class Index extends CI_Controller {
 			$txtFromDate=$this->input->post('txtFromDate');
 			$txtToDate=$this->input->post('txtToDate');
 
+			$plant_id=explode("-",$ddlPlant);
+
 			$data=array(
 				'fromDate' => $txtFromDate,
 				'toDate' => $txtToDate,
-				'employee_list' => $this->base_model->empdata_for_attendance($txtFromDate,$txtToDate,$ddlPlant)
+				'employee_list' => $this->base_model->empdata_for_attendance($txtFromDate,$txtToDate, $plant_id[0]),
+				'plant_id' => $plant_id[0]
 			);
 			
 			$this->load->view('attendance_sheet', $data);
