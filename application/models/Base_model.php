@@ -803,7 +803,7 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
     $this->db->where('current_date>=', $txtFromDate);
     $this->db->where('current_date<=', $txtToDate);
     $this->db->where('plant_id<=', $ddlPlantId);
-
+    $this->db->group_by('employee_id');
     $this->db->select('employee_id, fname, lname');
     $this->db->from('tbl_attendance');
     
