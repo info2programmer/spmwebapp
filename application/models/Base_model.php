@@ -772,6 +772,14 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
 
     $result=$this->db->get('tbl_accounts');
     if($result->num_rows()>0){
+      // Update Login Time Here
+      $this->db->where('username', $user_name);
+      $this->db->where('password', $password);
+      $updateObj=array(
+        'last_login' => date('Y-m-d H:i:s')
+      );
+      $this->db->update('tbl_accounts', $updateObj);
+      
       return true;
     }
     else{
