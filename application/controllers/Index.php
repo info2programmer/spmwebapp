@@ -597,10 +597,30 @@ class Index extends CI_Controller {
 	// This Function For Employee Attendance Sheet View
 	public function employee_attendance_sheet()
 	{
-		$data=array(
-			'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
-		);
-		$this->load->view('attendance_sheet_listing_view',$data);
+		
+
+		if($this->input->post('btnSubmit')=='search')
+		{
+			// If There Any Post Data Then This Block of code Will Execute
+			$ddlPlant=$this->input->post('ddlPlant');
+			$txtFromDate=$this->input->post('txtFromDate');
+			$txtToDate=$this->input->post('txtToDate');
+
+			$data=array(
+				'fromDate' => $txtFromDate,
+				'toDate' => $txtToDate,
+				'employee_list' => $this->base_model->empdata_for_attendance($txtFromDate,$txtToDate,$ddlPlant)
+			);
+			
+			$this->load->view('attendance_sheet', $data);
+		}
+		else {
+			$data=array(
+				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
+			);
+			$this->load->view('attendance_sheet_listing_view',$data);
+		}
+		
 	}
 
 

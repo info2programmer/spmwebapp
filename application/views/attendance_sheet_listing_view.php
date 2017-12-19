@@ -29,11 +29,12 @@
         <h4 style="font-family: 'Oswald', sans-serif;">Attendance Workers Plantwise</h4>
         <?php
         $form_attribute=array(
-          'class' => 'form-signin'
+          'class' => 'form-signin',
+          'target' => '_blank'
         );
 
         ?>
-        <?php echo form_open('Index/workers_assign',$form_attribute); ?>
+        <?php echo form_open('Index/employee_attendance_sheet',$form_attribute); ?>
         <h6 class="form-signin-heading" style="color:red;"><i class="fa fa-info-circle"></i> Assign worker to plant</h6>
 
         <label for="ddlPlant">Select Plant</label>
@@ -53,14 +54,14 @@
         <label for="txtFormDate">From-Date</label>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-          <input type="date" name="txtFromDate" class="form-control" id="txtFormDate" />
+          <input type="date" name="txtFromDate" required class="form-control" id="txtFormDate" />
         </div> 
         <br />
 
          <label for="txtToDate">To-Date</label>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-          <input type="date" name="txtToDate" class="form-control" id="txtToDate" />
+          <input type="date" name="txtToDate" required class="form-control" id="txtToDate" />
         </div> 
         <br />
 
