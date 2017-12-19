@@ -115,7 +115,7 @@
 				<td width="12">&nbsp;</td>
 				<td width="12">&nbsp;</td>
 				<td width="12">&nbsp;</td>
-				<td width="33">&nbsp;</td>
+				<td width="12">&nbsp;</td>
 			</tr>
 			<tr style="border-bottom:2px solid;">
 				<td width="27"><strong>Dt.</strong></td>
@@ -149,7 +149,7 @@
 				<td width="12">28</td>
 				<td width="12">29</td>
 				<td width="12">30</td>
-				<td width="33">31</td>
+				<td width="12">31</td>
 			</tr>
 			<?php 
 			
