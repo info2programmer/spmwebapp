@@ -50,9 +50,13 @@
                    <!--  <li class="navlitxt"><a href="salary.php" class="dropdown-toggle" role="button">Salary</a></li> -->
                     <!-- <li class="navlitxt"><a href="accountsandreports.php" class="dropdown-toggle" role="button">Accounts & Reports</a></li> -->
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/logout" class="dropdown-toggle" role="button">Log Out</a></li>
-                <?php else: ?>
+                <?php elseif($this->session->userdata('type')=='supervisor'): ?>
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/emp_attendance.html" class="dropdown-toggle" role="button">Employee Attendance</a></li>
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/EmployeeRelease.html" class="dropdown-toggle" role="button">Employee Release</a></li>
+                    <li class="navlitxt"><a href="<?php echo base_url();?>Index/logout" class="dropdown-toggle" role="button">Log Out</a></li>
+                <?php elseif($this->session->userdata('type')=='account-user'): ?>
+                    <li class="navlitxt"><a href="<?php echo base_url();?>Index/employee_attendance_sheet.html" class="dropdown-toggle" role="button">Employee Attendance Sheet</a></li>
+                    <li class="navlitxt"><a href="<?php echo base_url();?>Index/EmployeeRelease.html" class="dropdown-toggle" role="button">Employee Salary Sheet</a></li>
                     <li class="navlitxt"><a href="<?php echo base_url();?>Index/logout" class="dropdown-toggle" role="button">Log Out</a></li>
                 <?php endif ?>
                

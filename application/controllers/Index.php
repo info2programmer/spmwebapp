@@ -592,11 +592,16 @@ class Index extends CI_Controller {
 		// 		'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
 		// 	);
 		// 	$this->load->view('salary_index_view', $data);
-		
 	}
 
-
-	
+	// This Function For Employee Attendance Sheet View
+	public function employee_attendance_sheet()
+	{
+		$data=array(
+			'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
+		);
+		$this->load->view('attendance_sheet_listing_view',$data);
+	}
 
 
 }
