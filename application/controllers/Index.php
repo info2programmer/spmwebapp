@@ -644,7 +644,6 @@ class Index extends CI_Controller {
 		if (isset($_SESSION['user'])) {
 		if($this->input->post('btnSubmit')=='search')
 		{
-			if (isset($_SESSION['user'])) {
 			// If There Any Post Data Then This Block of code Will Execute
 			$ddlPlant=$this->input->post('ddlPlant');
 			$txtFromDate=$this->input->post('txtFromDate');
@@ -660,7 +659,7 @@ class Index extends CI_Controller {
 			);
 			
 			$this->load->view('attendance_sheet', $data);
-			}
+			
 		}
 		else {
 			$data=array(
