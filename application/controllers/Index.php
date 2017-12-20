@@ -316,9 +316,14 @@ class Index extends CI_Controller {
 
 	public function getfactorybylocation($location)
 	{
+		if ( isset($_SESSION['user'])) {
 		$area=$this->base_model->getfactorybylocation($location);
 		echo "<option selected='selected' value='' hidden>Select Factory </option>";
 		echo "<option>".$area[0]['factory_name']."</option>";
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 
@@ -399,6 +404,7 @@ class Index extends CI_Controller {
 	//this function for worker attendence
 	public function emp_attendance()
 	{
+		if (isset($_SESSION['user'])) {
 		$data['worker_list'] = $this->base_model->getassignworkerlistbysupervisor();
 		// echo $this->db->last_query();
 		// die;
@@ -411,6 +417,10 @@ class Index extends CI_Controller {
 		// else{
 			$this->load->view('worker_attendance_view',$data);
 		// }
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 		
 	}
 
@@ -419,14 +429,19 @@ class Index extends CI_Controller {
 	//This Function For Employee Release
 	public function EmployeeRelease()
 	{
+		if (isset($_SESSION['user'])) {
 		$data = array('worker_list' => $this->base_model->getassignworkerlistbysupervisor());
 		$this->load->view('super_workier_list_view', $data);
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 
 	public function attendence()
 	{
-
+		if (isset($_SESSION['user'])) {
 		if($this->input->post('btnSubmit') == 'search'){
 			$from_date=$this->input->post('txtFromDate');
 			$to_date=$this->input->post('txtToDate');
@@ -438,6 +453,10 @@ class Index extends CI_Controller {
 		else{
 			$this->load->view('attendance_list_view');
 		}
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 
 	}
 
@@ -445,6 +464,7 @@ class Index extends CI_Controller {
 	// This Function For Assign Worker
 	public function workers_assign()
 	{
+		if (isset($_SESSION['user'])) {
 		if ($this->input->post('btnSubmit') == 'search') {
 			// Get Value And Clean XSS
 			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
@@ -476,6 +496,10 @@ class Index extends CI_Controller {
 		// echo $this->db->last_query();
 		// die;
 		$this->load->view('workers_assign_view',$data);
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 	public function reports()
@@ -486,6 +510,7 @@ class Index extends CI_Controller {
 	// This Function For Transfer Worker
 	public function transfer_worker()
 	{
+		if (isset($_SESSION['user'])) {
 		if ($this->input->post('btnSubmit') == 'search') {
 
 			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
@@ -504,11 +529,16 @@ class Index extends CI_Controller {
 			);
 		}
 		$this->load->view('transfer_worker', $data);
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 	// This Function For Previous Attendance
 	public function previous_attendance()
 	{	
+		if (isset($_SESSION['user'])) {
 		if ($this->input->post('btnSubmit') == 'search') {
 
 			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
@@ -528,12 +558,17 @@ class Index extends CI_Controller {
 			);
 		}
 		$this->load->view('previous_attendance_view',$data);
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 
 	// This Function To Attendance Report View
 	public function attendance_report()
 	{
+		if (isset($_SESSION['user'])) {
 		if ($this->input->post('btnSubmit') == 'search') {
 			// Get All Data in a variable
 			$ddlPlant=$this->security->xss_clean($this->input->post('ddlPlant'));
@@ -559,11 +594,16 @@ class Index extends CI_Controller {
 		
 		$this->load->view('attendance_listing_view',$data);
 		// $this->load->view('attendance_report_view');
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 	// This Function To Salary Report View
 	public function salary_report()
 	{
+		if (isset($_SESSION['user'])) {
 		if($this->input->post('btnSubmit') == "submit")
 		{
 			// Get All Data
@@ -592,6 +632,10 @@ class Index extends CI_Controller {
 		// 		'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
 		// 	);
 		// 	$this->load->view('salary_index_view', $data);
+		}
+		else {
+			redirect(base_url().'index.php');
+		}
 	}
 
 	// This Function For Employee Attendance Sheet View
@@ -601,6 +645,7 @@ class Index extends CI_Controller {
 
 		if($this->input->post('btnSubmit')=='search')
 		{
+			if (isset($_SESSION['user'])) {
 			// If There Any Post Data Then This Block of code Will Execute
 			$ddlPlant=$this->input->post('ddlPlant');
 			$txtFromDate=$this->input->post('txtFromDate');
@@ -622,6 +667,10 @@ class Index extends CI_Controller {
 				'plant_list' => $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result() 
 			);
 			$this->load->view('attendance_sheet_listing_view',$data);
+		}
+		}
+		else {
+			redirect(base_url().'index.php');
 		}
 		
 	}
