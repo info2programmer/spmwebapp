@@ -641,8 +641,7 @@ class Index extends CI_Controller {
 	// This Function For Employee Attendance Sheet View
 	public function employee_attendance_sheet()
 	{
-		
-
+		if (isset($_SESSION['user'])) {
 		if($this->input->post('btnSubmit')=='search')
 		{
 			if (isset($_SESSION['user'])) {
@@ -661,6 +660,7 @@ class Index extends CI_Controller {
 			);
 			
 			$this->load->view('attendance_sheet', $data);
+			}
 		}
 		else {
 			$data=array(
@@ -672,7 +672,6 @@ class Index extends CI_Controller {
 		else {
 			redirect(base_url().'index.php');
 		}
-		
 	}
 
 

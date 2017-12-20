@@ -744,7 +744,7 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
     $this->db->where('tbl_attendance.current_date>=', $txtFromDate);
     $this->db->where('tbl_attendance.current_date<=', $txtToDate);
     $this->db->where('plant_id', $plant);
-    $this->db->select('SUM(full_day) as full_day,SUM(half_day) as half_day,SUM(over_time) as over_timer,SUM(full_day)+SUM(half_day) as total_days,employee_id,fname,lname,base_sal,emp_epf,emp_esi,house_rent,tot_sal,inc_rate,overtime_hr,overtime_amount');
+    $this->db->select('SUM(full_day) as full_day,SUM(half_day) as half_day,SUM(over_time) as over_timer,SUM(full_day)+SUM(half_day) as total_days,employee_id,fname,lname,base_sal,emp_epf,emp_esi,house_rent,tot_sal,inc_rate,overtime_hr,overtime_amount,acc_no');
     $this->db->from('tbl_attendance');
     $this->db->join('employee', 'employee.emp_id_auto = tbl_attendance.employee_id', 'INNER');
     $this->db->join('tbl_factory', 'tbl_factory.factory_id = tbl_attendance.plant_id', 'INNER');

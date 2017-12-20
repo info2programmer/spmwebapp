@@ -75,6 +75,7 @@
 				<th>Sl#</th>
 				<th>Employee Id</th>
 				<th>Employee Name</th>
+				<th>Account No</th>
 				<th>Full Day</th>
 				<th>Half day</th>
 				<th>Over Time</th>
@@ -98,6 +99,7 @@
 					<td><?php echo ++$count; ?></td>
 					<td>SPM/EMP/<?php echo $list->employee_id ?></td>
 					<td><?php echo $list->fname." ".$list->lname ?></td>
+					<td><?php echo $list->acc_no ?> </td>
 					<td><?php echo $list->full_day ?> </td>
 					<td><?php echo $list->half_day ?> </td>
 					<td><?php echo $list->over_timer ?> </td>
