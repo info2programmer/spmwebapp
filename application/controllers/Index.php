@@ -234,8 +234,32 @@ class Index extends CI_Controller {
 	{
 		if ( isset($_SESSION['user'])) {
 			$data['empDtlcnt'] = $this->db->query('SELECT MAX(emp_id_auto) AS empcnt FROM employee ORDER BY emp_id_auto DESC')->result_array();
-			$data['empDtl'] = $this->db->query('SELECT * FROM employee ORDER BY emp_id_auto DESC')->result_array();
+			//$data['empDtl'] = $this->db->query('SELECT * FROM employee ORDER BY emp_id_auto DESC')->result_array();
+			$data['empDtl'] = $this->base_model->all_employee();
 			$data['plant_details'] =   $this->db->query('SELECT * FROM tbl_factory WHERE status=1')->result();
+
+			// Pagination Code Goes Here
+			$this->load->library('pagination');
+			$url=base_url().'Index/Employee/';	
+			$config['base_url'] = $url;
+			$config['total_rows'] = $this->base_model->get_employee_rows();
+			$config['per_page'] = 10;
+			$config['full_tag_open'] = '<ul class="pagination" >';
+			$config['full_tag_close'] = '</ul>';
+			$config['first_tag_open'] = '<li>';
+			$config['last_tag_open'] = '<li>';
+			$config['next_tag_open'] = '<li>';
+			$config['prev_tag_open'] = '<li>';
+			$config['num_tag_open']="<li>";
+			$config['num_tag_close']="</li>";
+			$config['first_tag_close'] = '</li>';
+			$config['last_tag_close'] = '</li>';
+			$config['next_tag_close'] = '</li>';
+			$config['prev_tag_close'] = '</li>';
+			$config['cur_tag_open'] = "<li class=\"active\"><span><b>";
+			$config['cur_tag_close'] = '</b></span></li>';
+			$this->pagination->initialize($config);
+			// $this->load->view('admin_view/master_layout/admin_layout_view', $data);
 
 			$this->load->view('employeemanagement',$data);
 		}

@@ -820,6 +820,23 @@ public function do_attendance($emp_id,$full_day,$half_day,$over_time)
   } 
 
 
+  // This Function For Get Employee And Total Rows
+  public function all_employee()
+	{
+		// $this->db->order_by('col_date', 'desc');
+		$query = $this->db->get('employee', 10, $this->uri->segment(3));
+		// echo "<script>alert('".$this->uri->segment(3)."');</script>";
+		return $query->result_array();
+	}	
+
+	//This Function to Get Total Rows
+	public function get_employee_rows()
+	{
+		$query=$this->db->get('employee');
+		return $query->num_rows();
+	}
+
+
 }
 
 ?>

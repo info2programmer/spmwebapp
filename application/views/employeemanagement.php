@@ -44,6 +44,14 @@ $(window).keyup(function(e){
 </head>
 
 <body>
+<?php if($this->uri->segment(3)!=""): ?>
+<script>
+// alert();
+$(document).ready(function(){
+    $('html, body').animate({ scrollTop: $("#scroll").offset().top }, 1000);
+});
+</script>
+<?php endif; ?>
     <?php include "include/header.php";?>
 
     <?php if (!empty($edit)): ?>
@@ -498,14 +506,13 @@ $(window).keyup(function(e){
 
 <!-------------------------------------------------- List starts from here ---------------------------------------------------->
 
-<div class="row">
+<div class="row" id="scroll">
   <h5 class="text-center alert alert-success"><strong>LIST OF EMPLOYEES</strong></h5>
   <div class="col-md-12">
    <div class="table-responsive">
     <table width="1281" class="table table-bordered">
         <thead>
           <tr>
-            <th width="27">Sl#</th>
             <th width="125">Employee ID</th>
             <th width="243">Employee Name</th>
             <th width="295">Address</th>
@@ -517,7 +524,6 @@ $(window).keyup(function(e){
     <tbody>
         <?php $i=1; foreach($empDtl AS $empldtl){?>
         <tr>
-            <td><?php echo $i;?></td>
             <td><?php echo $empldtl['emp_id'];?></td>
             <td><?php echo $empldtl['fname'].' '.$empldtl['lname'];?></td>
             <td>
@@ -538,6 +544,9 @@ $(window).keyup(function(e){
 
     </tbody>
 </table>
+<center>
+    <?php echo $this->pagination->create_links(); ?>
+</center>
 </div>
 </div>
 </div>
